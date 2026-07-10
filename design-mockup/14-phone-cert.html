@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>본인 인증</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__lead">
+        <button type="button" class="topbar__btn topbar__btn--back" id="btnBack" aria-label="뒤로가기">
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" aria-hidden="true">
+                <path d="M9 1L1 9L9 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <a class="topbar__logo" href="#" aria-label="홈으로">
+            <img src="images/callpage-web-logo.png" alt="CallPage">
+        </a>
+    </div>
+    <div class="topbar__title">본인 인증</div>
+    <div class="topbar__trail"></div>
+</header>
+
+<main class="page page--auth">
+
+    <!-- Step 1: 인증 시작 -->
+    <section id="stepStart">
+        <div class="auth-hero auth-hero--compact">
+            <h1 class="auth-title">전화 인증</h1>
+            <p class="auth-sub">아래 버튼을 누르면 안심번호가 발급됩니다.<br>안내된 번호로 전화를 걸면 자동으로 인증이 완료돼요.</p>
+        </div>
+
+        <button type="button" class="btn btn--block" id="btnRequest">안심번호 발급받기</button>
+    </section>
+
+    <!-- Step 2: 안심번호 발급 후 (예시 — 기본 숨김) -->
+    <section id="stepCert" hidden>
+        <div class="cert-box">
+            <p class="cert-box__label">아래 번호로 전화를 걸어주세요</p>
+            <p class="cert-box__number" id="safetyNumber">0701-234-5678</p>
+            <p class="cert-box__timer" id="certTimer">00:42</p>
+            <p class="cert-box__status" id="certStatus">전화 연결을 기다리는 중…</p>
+
+            <a class="btn btn--block" id="btnCall" href="tel:07012345678">전화 걸기</a>
+            <button type="button" class="btn btn--outline btn--block mt-8" id="btnRetry" hidden>다시 시도</button>
+        </div>
+    </section>
+
+</main>
+
+<!-- ── 아래는 목차 전용 상태 예시 ── -->
+<div style="border-top:1px dashed var(--line);margin-top:40px;padding-top:20px;">
+    <p style="text-align:center;font-size:11px;color:var(--muted);margin-bottom:20px;">Step 2 예시 — 안심번호 발급 후</p>
+    <div class="page page--auth" style="padding-top:0;">
+        <div class="cert-box">
+            <p class="cert-box__label">아래 번호로 전화를 걸어주세요</p>
+            <p class="cert-box__number">0701-234-5678</p>
+            <p class="cert-box__timer">00:42</p>
+            <p class="cert-box__status">전화 연결을 기다리는 중…</p>
+            <a class="btn btn--block" href="#">전화 걸기</a>
+        </div>
+    </div>
+
+    <p style="text-align:center;font-size:11px;color:var(--muted);margin:24px 0 20px;">인증 완료 상태 예시</p>
+    <div class="page page--auth" style="padding-top:0;">
+        <div class="cert-box">
+            <p class="cert-box__label">아래 번호로 전화를 걸어주세요</p>
+            <p class="cert-box__number">0701-234-5678</p>
+            <p class="cert-box__timer" style="color:var(--success);">✔ 완료</p>
+            <p class="cert-box__status" style="color:var(--success);">✔ 인증이 완료되었습니다.</p>
+        </div>
+    </div>
+
+    <p style="text-align:center;font-size:11px;color:var(--muted);margin:24px 0 20px;">시간 초과 상태 예시</p>
+    <div class="page page--auth" style="padding-top:0;">
+        <div class="cert-box">
+            <p class="cert-box__label">아래 번호로 전화를 걸어주세요</p>
+            <p class="cert-box__number">0701-234-5678</p>
+            <p class="cert-box__timer" style="color:var(--danger);">00:00</p>
+            <p class="cert-box__status" style="color:var(--danger);">인증 시간이 초과되었어요</p>
+            <button type="button" class="btn btn--outline btn--block mt-8">다시 시도</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/ui.js"></script>
+<script src="js/common.js"></script>
+<script>
+(function () {
+    var btnReq    = document.getElementById('btnRequest');
+    var stepStart = document.getElementById('stepStart');
+    var stepCert  = document.getElementById('stepCert');
+
+    /* 모크업: 버튼 클릭 시 Step 2로 전환 */
+    btnReq.addEventListener('click', function () {
+        stepStart.hidden = true;
+        stepCert.hidden = false;
+
+        /* 카운트다운 */
+        var timer = document.getElementById('certTimer');
+        var left = 42;
+        var iv = setInterval(function () {
+            if (left <= 0) { clearInterval(iv); return; }
+            left--;
+            var m = String(Math.floor(left / 60)).padStart(2, '0');
+            var s = String(left % 60).padStart(2, '0');
+            timer.textContent = m + ':' + s;
+            if (left <= 10) timer.style.color = 'var(--danger)';
+        }, 1000);
+    });
+
+    document.getElementById('btnRetry').addEventListener('click', function () {
+        stepCert.hidden = true;
+        stepStart.hidden = false;
+    });
+})();
+</script>
+<div style="text-align:center;padding:8px;font-size:11px;color:#aaa;margin-top:20px;">
+    <a href="00-index.html">← 목차</a> | 14 전화 인증
+</div>
+</body>
+</html>

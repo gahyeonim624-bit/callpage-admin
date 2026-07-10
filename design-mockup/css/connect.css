@@ -1,0 +1,278 @@
+/* ==========================================================================
+   connect.css — 사전 질문 응답 페이지 전용
+========================================================================== */
+
+.connect-body {
+    background: #fff;
+    min-height: 100vh;
+    align-items: center;
+}
+
+/* ─── 레이아웃 래퍼 ─────────────────────────────────────────────────── */
+.connect-wrap {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 0 0 120px;
+}
+
+/* ─── 헤더 ──────────────────────────────────────────────────────────── */
+.connect-header {
+    padding: 28px 20px 0;
+    border-bottom: 1px solid var(--line);
+    text-align: center;
+}
+.connect-header__title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0 0 8px;
+    line-height: 1.4;
+}
+.connect-header__desc {
+    font-size: var(--fs-base);
+    color: var(--sub-text);
+    margin: 0 0 16px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: keep-all;
+}
+.connect-header__images {
+    margin: 0 -20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.connect-header__images .img-thumb {
+    width: 100%;
+    height: auto;
+}
+.connect-header__images .img-thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ─── 질문 목록 ──────────────────────────────────────────────────────── */
+.connect-questions {
+    padding: 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.connect-q-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.connect-q-label {
+    font-size: var(--fs-md);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+    line-height: 1.5;
+}
+.connect-q-check-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    background: var(--line-light);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-base);
+    color: var(--text);
+    cursor: pointer;
+}
+.connect-q-check-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    flex-shrink: 0;
+}
+
+/* ─── 하단 버튼 영역 ─────────────────────────────────────────────────── */
+.connect-actions {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 430px;
+    padding: 12px 20px calc(16px + env(safe-area-inset-bottom, 0));
+    background: #fff;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 바로 연결 버튼 — 초록색, 라운드 */
+.connect-btn {
+    width: 100%;
+    height: 52px;
+    background: #00C577;
+    color: #fff;
+    border: none;
+    border-radius: 26px;
+    font-size: var(--fs-lg);
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.15s;
+    letter-spacing: -0.2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.connect-btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+.connect-btn:active { background: #00A860; }
+
+/* 개인정보 처리 방침 링크 */
+.privacy-link {
+    font-size: var(--fs-xs);
+    color: var(--muted);
+    text-decoration: none;
+}
+.privacy-link:active { color: var(--sub-text); }
+
+/* ─── 완료 화면 ──────────────────────────────────────────────────────── */
+.connect-done {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 80px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+.connect-done__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--success-light);
+    color: var(--success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.connect-done__icon svg { width: 28px; height: 28px; }
+.connect-done__title {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0;
+}
+.connect-done__desc {
+    font-size: var(--fs-base);
+    color: var(--sub-text);
+    margin: 0;
+    line-height: 1.6;
+}
+.connect-done__pn {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.connect-done__pn-label {
+    font-size: var(--fs-base);
+    color: var(--sub-text);
+    margin: 0;
+}
+.connect-done__pn-number {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+}
+.connect-done__pn-number:hover { text-decoration: underline; }
+
+/* ─── 개인정보 처리 방침 팝업 ────────────────────────────────────────── */
+.privacy-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: rgba(17, 24, 39, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+}
+.privacy-overlay[aria-hidden="false"] {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.privacy-sheet {
+    width: 100%;
+    max-width: 430px;
+    max-height: 80vh;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(100%);
+    transition: transform 0.25s cubic-bezier(0.32, 0.72, 0, 1);
+}
+.privacy-overlay[aria-hidden="false"] .privacy-sheet {
+    transform: translateY(0);
+}
+
+.privacy-sheet__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 16px 12px 20px;
+    border-bottom: 1px solid var(--line);
+    flex-shrink: 0;
+}
+.privacy-sheet__title {
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+}
+.privacy-sheet__close {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: var(--sub-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+.privacy-sheet__close:active { background: var(--line-light); }
+.privacy-sheet__close svg { width: 20px; height: 20px; display: block; }
+
+.privacy-sheet__body {
+    padding: 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: var(--fs-base);
+    color: var(--sub-text);
+    line-height: 1.7;
+}
+.privacy-sheet__body p { margin: 0 0 12px; }
+.privacy-sheet__body ul {
+    margin: 0;
+    padding: 0 0 0 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.privacy-sheet__body li { word-break: keep-all; }
+.privacy-sheet__body strong { color: var(--text); font-weight: 700; }

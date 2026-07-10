@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>콜페이지 만들기</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/landing.css">
+<link rel="stylesheet" href="css/connect.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__lead">
+        <button type="button" class="topbar__btn topbar__btn--back" id="btnBack" aria-label="뒤로가기">
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" aria-hidden="true">
+                <path d="M9 1L1 9L9 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <a class="topbar__logo" href="#" aria-label="홈으로">
+            <img src="images/callpage-web-logo.png" alt="CallPage">
+        </a>
+    </div>
+    <div class="topbar__title">콜페이지 만들기</div>
+    <div class="topbar__trail">
+        <div class="topbar__mode" id="callModeToggle" data-active="-1">
+            <span class="topbar__mode-slider" aria-hidden="true"></span>
+            <button type="button" class="topbar__mode-btn" aria-label="자동 응대" data-mode="-1">자동응대</button>
+            <button type="button" class="topbar__mode-btn" aria-label="바로 연결" data-mode="0">바로연결</button>
+        </div>
+    </div>
+</header>
+
+<main class="page">
+
+    <!-- ── STEP 1 : 사전 질문 작성 ── -->
+    <div class="wizard-header">
+        <div class="wizard-step-bar">
+            <div class="wz-step active" data-step="1">
+                <div class="wz-step__dot"><span>1</span></div>
+                <div class="wz-step__label">사전 질문 작성</div>
+            </div>
+            <div class="wz-connector"></div>
+            <div class="wz-step" data-step="2">
+                <div class="wz-step__dot"><span>2</span></div>
+                <div class="wz-step__label">광고 채널 등록</div>
+            </div>
+            <div class="wz-connector"></div>
+            <div class="wz-step" data-step="3">
+                <div class="wz-step__dot"><span>3</span></div>
+                <div class="wz-step__label">기본 정보</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wizard-panel" style="margin-top:15px;">
+
+        <div class="preview-frame">
+
+            <div class="preview-header">
+                <input class="preview-title-input" type="text" placeholder="제목을 입력해 주세요 (선택)" value="강남구 부동산 매매 상담" />
+                <textarea class="preview-desc-input" placeholder="내용을 입력해 주세요 (선택)" rows="2">강남구 아파트 매매 전문 상담사가 직접 연결해 드립니다.</textarea>
+                <div class="preview-img-gallery">
+                    <label class="img-add-btn" aria-label="이미지 추가">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        이미지 추가 (선택)
+                    </label>
+                </div>
+            </div>
+
+            <div class="preview-questions">
+
+                <!-- 텍스트 질문 -->
+                <div class="preview-q-item">
+                    <div class="preview-q-item-head">
+                        <button type="button" class="preview-q-del" aria-label="질문 삭제">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </button>
+                    </div>
+                    <input class="preview-q-label q-question" type="text" value="현재 거주 지역이 어디신가요?" placeholder="질문을 입력해 주세요" />
+                    <div class="preview-q-text-area">
+                        <div class="preview-q-ph-edit">
+                            <span class="preview-q-ph-label">답변 예시</span>
+                            <input class="input q-placeholder" type="text" value="예) 서울시 강남구" placeholder="예) 증상을 입력해주세요" />
+                        </div>
+                    </div>
+                    <div class="preview-q-toolbar">
+                        <div class="pill">
+                            <label class="pill__item"><input class="pill__input" type="radio" name="qtype_1" value="text" checked /><span class="round__btn">텍스트</span></label>
+                            <label class="pill__item"><input class="pill__input" type="radio" name="qtype_1" value="checkbox" /><span class="round__btn">체크박스</span></label>
+                            <label class="pill__item"><input class="pill__input" type="radio" name="qtype_1" value="dropdown" /><span class="round__btn">드롭다운</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 체크박스 질문 -->
+                <div class="preview-q-item">
+                    <div class="preview-q-item-head">
+                        <button type="button" class="preview-q-del" aria-label="질문 삭제">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </button>
+                    </div>
+                    <input class="preview-q-label q-question" type="text" value="관심 있는 평형대를 선택해 주세요." placeholder="질문을 입력해 주세요" />
+                    <div class="preview-q-text-area" style="display:none;"></div>
+                    <div class="preview-q-toolbar">
+                        <div class="pill">
+                            <label class="pill__item"><input class="pill__input" type="radio" name="qtype_2" value="text" /><span class="round__btn">텍스트</span></label>
+                            <label class="pill__item"><input class="pill__input" type="radio" name="qtype_2" value="checkbox" checked /><span class="round__btn">체크박스</span></label>
+                            <label class="pill__item"><input class="pill__input" type="radio" name="qtype_2" value="dropdown" /><span class="round__btn">드롭다운</span></label>
+                        </div>
+                    </div>
+                    <div class="preview-q-options-area">
+                        <div class="preview-section-label preview-section-label--edit">
+                            <svg viewBox="0 0 24 24" fill="none" width="12" height="12"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            옵션 설정
+                        </div>
+                        <div class="opt-list">
+                            <div class="opt-row">
+                                <label class="preview-opt-check-label">
+                                    <input type="checkbox" class="preview-opt-cb" disabled />
+                                    <input class="preview-opt-text opt-row__input" type="text" value="20평대" />
+                                </label>
+                                <button type="button" class="opt-row__del" aria-label="옵션 삭제"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                            </div>
+                            <div class="opt-row">
+                                <label class="preview-opt-check-label">
+                                    <input type="checkbox" class="preview-opt-cb" disabled />
+                                    <input class="preview-opt-text opt-row__input" type="text" value="30평대" />
+                                </label>
+                                <button type="button" class="opt-row__del" aria-label="옵션 삭제"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                            </div>
+                            <div class="opt-row">
+                                <label class="preview-opt-check-label">
+                                    <input type="checkbox" class="preview-opt-cb" disabled />
+                                    <input class="preview-opt-text opt-row__input" type="text" value="40평대 이상" />
+                                </label>
+                                <button type="button" class="opt-row__del" aria-label="옵션 삭제"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                            </div>
+                        </div>
+                        <button type="button" class="preview-add-opt-btn">
+                            <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            옵션 추가
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="preview-add-q-wrap">
+                <button type="button" class="preview-add-q-btn">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    질문 추가 (선택)
+                </button>
+                <p class="field__desc" style="margin:8px 0 0;text-align:center;">개인정보 및 민감정보를 포함한 질문은 등록할 수 없습니다.</p>
+            </div>
+
+        </div>
+
+        <section class="section" style="padding-bottom:8px;">
+            <button type="button" class="preview-open-btn">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                미리보기
+            </button>
+        </section>
+
+        <section class="section wizard-nav" style="margin-top:0;">
+            <button type="button" class="btn btn--block">다음</button>
+        </section>
+
+    </div>
+
+    <!-- ── STEP 2 예시 ── -->
+    <div style="border-top:1px dashed var(--line);margin-top:40px;padding-top:20px;">
+        <p style="text-align:center;font-size:11px;color:var(--muted);margin-bottom:0;">STEP 2 예시 — 광고 채널 등록</p>
+    </div>
+
+    <div class="wizard-header">
+        <div class="wizard-step-bar">
+            <div class="wz-step done" data-step="1"><div class="wz-step__dot"><span>1</span></div><div class="wz-step__label">사전 질문 작성</div></div>
+            <div class="wz-connector done"></div>
+            <div class="wz-step active" data-step="2"><div class="wz-step__dot"><span>2</span></div><div class="wz-step__label">광고 채널 등록</div></div>
+            <div class="wz-connector"></div>
+            <div class="wz-step" data-step="3"><div class="wz-step__dot"><span>3</span></div><div class="wz-step__label">기본 정보</div></div>
+        </div>
+    </div>
+
+    <div class="wizard-panel" style="margin-top:15px;">
+        <section class="section">
+            <h1 class="page-title">광고 채널 등록</h1>
+            <p class="page-desc">이 콜페이지를 연결할 광고 채널을 입력해 주세요.<br>예) 인스타그램, 구글, 네이버 등</p>
+        </section>
+        <section class="section" style="display:flex;flex-direction:column;gap:18px;">
+            <div>
+                <div class="ad-item">
+                    <div class="q-item__head">
+                        <span class="q-item__label">광고 채널 1</span>
+                        <button type="button" class="q-item__del"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                    </div>
+                    <input class="input ad-channel" type="text" value="네이버 부동산" placeholder="예) 인스타그램, 구글, 네이버" />
+                </div>
+                <div class="ad-item" style="margin-top:18px;">
+                    <div class="q-item__head">
+                        <span class="q-item__label">광고 채널 2</span>
+                        <button type="button" class="q-item__del"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+                    </div>
+                    <input class="input ad-channel" type="text" value="인스타그램" placeholder="예) 인스타그램, 구글, 네이버" />
+                </div>
+            </div>
+            <button type="button" class="add-btn">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                광고 채널 추가
+            </button>
+        </section>
+        <section class="section wizard-nav">
+            <button type="button" class="btn btn--outline">이전</button>
+            <button type="button" class="btn">다음</button>
+        </section>
+    </div>
+
+    <!-- ── STEP 3 예시 ── -->
+    <div style="border-top:1px dashed var(--line);margin-top:40px;padding-top:20px;">
+        <p style="text-align:center;font-size:11px;color:var(--muted);margin-bottom:0;">STEP 3 예시 — 기본 정보</p>
+    </div>
+
+    <div class="wizard-header">
+        <div class="wizard-step-bar">
+            <div class="wz-step done" data-step="1"><div class="wz-step__dot"><span>1</span></div><div class="wz-step__label">사전 질문 작성</div></div>
+            <div class="wz-connector done"></div>
+            <div class="wz-step done" data-step="2"><div class="wz-step__dot"><span>2</span></div><div class="wz-step__label">광고 채널 등록</div></div>
+            <div class="wz-connector done"></div>
+            <div class="wz-step active" data-step="3"><div class="wz-step__dot"><span>3</span></div><div class="wz-step__label">기본 정보</div></div>
+        </div>
+    </div>
+
+    <div class="wizard-panel" style="margin-top:15px;">
+        <section class="section">
+            <h1 class="page-title">콜페이지 기본 정보</h1>
+            <p class="page-desc">광고와 연결할 콜페이지 이름을 입력해 주세요.</p>
+        </section>
+        <section class="section">
+            <div class="field">
+                <label class="field__label">콜페이지 이름 <span style="color:var(--danger)">*</span></label>
+                <input class="input" type="text" value="강남구 부동산 매매 상담" placeholder="예) 노안 교정 수술 이벤트" />
+                <p class="field__desc">광고 또는 컨텐츠별로 콜페이지 이름을 설정해 주세요.<br>콜페이지별 유입 수와 상담 전환율을 비교·분석할 수 있습니다.</p>
+            </div>
+        </section>
+        <section class="section wizard-nav">
+            <button type="button" class="btn btn--outline">이전</button>
+            <button type="button" class="btn">콜페이지 생성</button>
+        </section>
+    </div>
+
+</main>
+
+<script src="js/ui.js"></script>
+<script src="js/common.js"></script>
+<div style="text-align:center;padding:8px;font-size:11px;color:#aaa;margin-top:20px;">
+    <a href="00-index.html">← 목차</a> | 06 콜페이지 만들기
+</div>
+</body>
+</html>

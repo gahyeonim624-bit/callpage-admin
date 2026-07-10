@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>전환분석</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/stats.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__lead">
+        <button type="button" class="topbar__btn topbar__btn--back" id="btnBack" aria-label="뒤로가기">
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" aria-hidden="true">
+                <path d="M9 1L1 9L9 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <a class="topbar__logo" href="#" aria-label="홈으로">
+            <img src="images/callpage-web-logo.png" alt="CallPage">
+        </a>
+    </div>
+    <div class="topbar__title">전환분석</div>
+    <div class="topbar__trail">
+        <div class="topbar__mode" id="callModeToggle" data-active="-1">
+            <span class="topbar__mode-slider" aria-hidden="true"></span>
+            <button type="button" class="topbar__mode-btn" aria-label="자동 응대" data-mode="-1">자동응대</button>
+            <button type="button" class="topbar__mode-btn" aria-label="바로 연결" data-mode="0">바로연결</button>
+        </div>
+    </div>
+</header>
+
+<main class="page">
+
+    <!-- 기간 필터 -->
+    <section class="section">
+        <div class="analysis-period-bar">
+            <div class="analysis-period">
+                <svg class="analysis-period__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round"/>
+                </svg>
+                <span>
+                    <span>2026.06.03</span>
+                    ~
+                    <span>2026.07.03</span>
+                </span>
+            </div>
+            <div class="analysis-period-btns">
+                <button type="button" class="analysis-period-btn">
+                    최근 7일
+                </button>
+                <button type="button" class="analysis-period-btn analysis-period-btn--active">
+                    최근 30일
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ① 유입 건 수 차트 -->
+    <section class="section">
+        <div class="analysis-card">
+            <div class="analysis-card__head">
+                <h2 class="analysis-card__title">콜페이지 유입 건 수</h2>
+            </div>
+            <p class="analysis-card__desc">광고에 대한 초기 관심도를 보여줍니다.</p>
+
+            <div class="analysis-chart">
+                <div class="analysis-chart__bars">
+                    <div class="analysis-chart__item" data-index="0">
+                        <span class="analysis-chart__value">42</span>
+                        <div class="analysis-chart__bar-wrap">
+                            <div class="analysis-chart__bar" style="height:100%;" data-index="0"></div>
+                        </div>
+                        <div class="analysis-chart__num">1</div>
+                    </div>
+                    <div class="analysis-chart__item" data-index="1">
+                        <span class="analysis-chart__value">28</span>
+                        <div class="analysis-chart__bar-wrap">
+                            <div class="analysis-chart__bar" style="height:67%;" data-index="1"></div>
+                        </div>
+                        <div class="analysis-chart__num">2</div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="analysis-legend">
+                <li class="analysis-legend__item">
+                    <span class="analysis-legend__num" data-index="0">1</span>
+                    <span class="analysis-legend__label">강남구 부동산 매매 상담 · 네이버 부동산</span>
+                </li>
+                <li class="analysis-legend__item">
+                    <span class="analysis-legend__num" data-index="1">2</span>
+                    <span class="analysis-legend__label">강남구 부동산 매매 상담 · 인스타그램</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ② 상담 전환율 차트 -->
+    <section class="section">
+        <div class="analysis-card">
+            <div class="analysis-card__head">
+                <h2 class="analysis-card__title">상담 전환율</h2>
+            </div>
+            <p class="analysis-card__desc">유입 대비 상담 요청으로 이어진 비율을 보여줍니다.</p>
+
+            <div class="analysis-chart">
+                <div class="analysis-chart__bars">
+                    <div class="analysis-chart__item" data-index="0">
+                        <span class="analysis-chart__value"><span>31</span>%</span>
+                        <div class="analysis-chart__bar-wrap">
+                            <div class="analysis-chart__bar" style="height:69%;" data-index="0"></div>
+                        </div>
+                        <div class="analysis-chart__num">1</div>
+                    </div>
+                    <div class="analysis-chart__item" data-index="1">
+                        <span class="analysis-chart__value"><span>45</span>%</span>
+                        <div class="analysis-chart__bar-wrap">
+                            <div class="analysis-chart__bar" style="height:100%;" data-index="1"></div>
+                        </div>
+                        <div class="analysis-chart__num">2</div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="analysis-legend">
+                <li class="analysis-legend__item">
+                    <span class="analysis-legend__num" data-index="0">1</span>
+                    <span class="analysis-legend__label">강남구 부동산 매매 상담 · 네이버 부동산</span>
+                </li>
+                <li class="analysis-legend__item">
+                    <span class="analysis-legend__num" data-index="1">2</span>
+                    <span class="analysis-legend__label">강남구 부동산 매매 상담 · 인스타그램</span>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
+</main>
+
+<script src="js/ui.js"></script>
+<script src="js/common.js"></script>
+<div style="text-align:center;padding:8px;font-size:11px;color:#aaa;margin-top:20px;">
+    <a href="00-index.html">← 목차</a> | 11 전환분석 결과
+</div>
+</body>
+</html>

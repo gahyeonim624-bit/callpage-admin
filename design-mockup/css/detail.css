@@ -1,0 +1,306 @@
+/* ==========================================================================
+   detail.css — callData/detail 페이지 전용
+========================================================================== */
+
+/* ─── 상단 정보 카드 (list.html 공유 스타일) ─────────────────────────── */
+.ch-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: background 0.2s, border-color 0.2s;
+}
+.ch-card--incomplete {
+    background: #fff9f9;
+    border-color: #FFCFCB;
+}
+
+.ch-card__inner--static {
+    display: block;
+    padding: 14px 16px;
+}
+
+.ch-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.ch-row + .ch-row { margin-top: 8px; }
+
+.ch-row--head { margin-bottom: 2px; }
+
+.ch-datetime {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+.ch-date {
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.2px;
+}
+.ch-time {
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--muted);
+}
+
+.ch-label {
+    flex-shrink: 0;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    color: var(--muted);
+    width: 54px;
+}
+
+.ch-row--phone { align-items: center; }
+.ch-number {
+    flex: 1;
+    font-size: var(--fs-md);
+    font-weight: 600;
+    color: var(--text);
+}
+.ch-call-btn {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.ch-call-btn svg { width: 18px; height: 18px; }
+.ch-call-btn:active { background: #b2e6df; }
+
+.ch-page {
+    flex: 1;
+    font-size: var(--fs-sm);
+    color: var(--sub-text);
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ch-page--link {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* 상담상태 행 */
+.ch-row--status { align-items: center; }
+.ch-row--status .status-toggle {
+    flex: 1;
+}
+
+/* ─── Event Link ─────────────────────────────────────────────────────── */
+.event-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+.event-link__icon {
+    font-size: var(--fs-md);
+    opacity: 0.85;
+}
+
+/* ─── 메모 입력행 ────────────────────────────────────────────────────── */
+.memo-input-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.memo-input-row .memo-input {
+    flex: 1;
+}
+.memo-save-btn {
+    flex-shrink: 0;
+    padding: 0 16px;
+    height: 44px;
+}
+
+/* ─── 상담 이력 타임라인 ──────────────────────────────────────────────── */
+.history-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line-light);
+}
+.history-item:last-child { border-bottom: none; padding-bottom: 0; }
+.history-item:first-child { padding-top: 0; }
+
+.history-item__dot {
+    flex-shrink: 0;
+    margin-top: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+.history-item__dot--memo {
+    background: var(--sub-text);
+}
+.history-item--complete .history-item__dot {
+    background: var(--success);
+}
+
+.history-item__body {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+.history-item__label {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--text);
+}
+.history-item--complete .history-item__label {
+    color: var(--success);
+}
+.history-item__time {
+    font-size: var(--fs-xs);
+    color: var(--muted);
+}
+.history-item__memo {
+    margin: 4px 0 0;
+    font-size: var(--fs-base);
+    color: var(--text);
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+/* ─── Memo (기존 — 사용 시 유지) ────────────────────────────────────── */
+.memo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.memo-list {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.memo-item__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.memo-item__user {
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--sub-text);
+}
+.memo-item__date {
+    font-size: var(--fs-xs);
+    color: var(--muted);
+}
+.memo-item__text {
+    font-size: var(--fs-base);
+    color: var(--text);
+    line-height: 1.55;
+    white-space: pre-line;
+    word-break: break-word;
+}
+
+/* ─── 사전 질문 & 답변 ───────────────────────────────────────────────── */
+.qa-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line-light);
+}
+.qa-item:first-child { padding-top: 0; }
+.qa-item:last-child  { border-bottom: none; padding-bottom: 0; }
+
+.qa-item__row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.qa-item__label {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    font-size: var(--fs-xs);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+.qa-item__label--q {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+.qa-item__label--a {
+    background: var(--line-light);
+    color: var(--sub-text);
+}
+.qa-item__text {
+    margin: 0;
+    font-size: var(--fs-base);
+    line-height: 1.55;
+    color: var(--text);
+    word-break: break-word;
+}
+.qa-item__text--empty {
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* ─── 상담 상태 토글 ─────────────────────────────────────────────────── */
+.status-toggle {
+    display: flex;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 4px;
+    gap: 4px;
+}
+.status-toggle__btn {
+    flex: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    font-size: var(--fs-base);
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+.status-toggle__btn:active {
+    opacity: 0.85;
+}
+/* 미완료 활성 */
+#btnIncomplete.status-toggle__btn--active {
+    background: #ffe3e1;
+    color: #ff5547;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+/* 완료 활성 */
+#btnCompleted.status-toggle__btn--active {
+    background: var(--success-light);
+    color: var(--success);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}

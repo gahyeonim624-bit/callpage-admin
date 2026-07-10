@@ -1,0 +1,66 @@
+/* ==========================================================================
+   terms.css — 약관/정책 페이지 공통 (이용약관/개인정보처리방침/마케팅)
+========================================================================== */
+
+.terms {
+    padding: 8px 0 24px;
+}
+
+.terms__title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0 0 4px;
+    letter-spacing: -0.3px;
+}
+.terms__meta {
+    font-size: var(--fs-sm);
+    color: var(--muted);
+    margin: 0 0 24px;
+}
+
+.terms__section {
+    margin-top: 28px;
+}
+.terms__section:first-of-type {
+    margin-top: 8px;
+}
+
+.terms__h2 {
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 10px;
+}
+
+.terms__p {
+    font-size: var(--fs-base);
+    color: var(--sub-text);
+    line-height: 1.7;
+    margin: 0 0 10px;
+    word-break: keep-all;
+}
+
+.terms__list {
+    margin: 0 0 12px;
+    padding-left: 18px;
+}
+.terms__list li {
+    font-size: var(--fs-base);
+    color: var(--sub-text);
+    line-height: 1.7;
+    margin-bottom: 4px;
+    word-break: keep-all;
+}
+
+.terms__divider {
+    height: 1px;
+    background: var(--line);
+    margin: 32px 0;
+    border: 0;
+}
+
+.terms__highlight {
+    color: var(--primary);
+    font-weight: 600;
+}

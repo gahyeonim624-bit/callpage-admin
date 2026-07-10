@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>전환분석</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/stats.css">
+</head>
+<body data-toplevel="1" data-no-back="1">
+
+<header class="topbar">
+    <div class="topbar__lead">
+        <button type="button" class="topbar__btn topbar__btn--back" id="btnBack" aria-label="뒤로가기">
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none" aria-hidden="true">
+                <path d="M9 1L1 9L9 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <a class="topbar__logo" href="#" aria-label="홈으로">
+            <img src="images/callpage-web-logo.png" alt="CallPage">
+        </a>
+    </div>
+    <div class="topbar__title">전환분석</div>
+    <div class="topbar__trail">
+        <div class="topbar__mode" id="callModeToggle" data-active="-1">
+            <span class="topbar__mode-slider" aria-hidden="true"></span>
+            <button type="button" class="topbar__mode-btn" aria-label="자동 응대" data-mode="-1">자동응대</button>
+            <button type="button" class="topbar__mode-btn" aria-label="바로 연결" data-mode="0">바로연결</button>
+        </div>
+    </div>
+</header>
+
+<main class="page">
+
+    <!-- 페이지 헤더 -->
+    <section class="section">
+        <div class="conv-header">
+            <div class="conv-header__left">
+                <h1 class="conv-header__title">전환 분석</h1>
+            </div>
+            <button type="button" class="conv-header__refresh" id="btnRefresh" aria-label="새로고침">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M1 4v6h6" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.51 15a9 9 0 1 0 .49-4.5" stroke="currentColor" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <p class="conv-header__desc">
+            아래 등록된 콜페이지 목록 중 분석을 원하시는<br/>콜페이지를 선택해 주세요.
+        </p>
+    </section>
+
+    <!-- 광고 목록 -->
+    <section class="section conv-list-section">
+        <ul class="conv-list">
+            <li class="conv-list__item" data-ad-seq="1">
+                <label class="conv-check">
+                    <input class="conv-check__input" type="checkbox" value="1" checked />
+                    <span class="conv-check__box" aria-hidden="true">
+                        <svg class="conv-check__icon" viewBox="0 0 14 11" fill="none">
+                            <path d="M1 5.5L5 9.5L13 1" stroke="white" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="conv-check__label">강남구 부동산 매매 상담 · 네이버 부동산</span>
+                </label>
+            </li>
+            <li class="conv-list__item" data-ad-seq="2">
+                <label class="conv-check">
+                    <input class="conv-check__input" type="checkbox" value="2" checked />
+                    <span class="conv-check__box" aria-hidden="true">
+                        <svg class="conv-check__icon" viewBox="0 0 14 11" fill="none">
+                            <path d="M1 5.5L5 9.5L13 1" stroke="white" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="conv-check__label">강남구 부동산 매매 상담 · 인스타그램</span>
+                </label>
+            </li>
+            <li class="conv-list__item" data-ad-seq="3">
+                <label class="conv-check">
+                    <input class="conv-check__input" type="checkbox" value="3" />
+                    <span class="conv-check__box" aria-hidden="true">
+                        <svg class="conv-check__icon" viewBox="0 0 14 11" fill="none">
+                            <path d="M1 5.5L5 9.5L13 1" stroke="white" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="conv-check__label">강남구 부동산 매매 상담 · 유튜브</span>
+                </label>
+            </li>
+            <li class="conv-list__item" data-ad-seq="4">
+                <label class="conv-check">
+                    <input class="conv-check__input" type="checkbox" value="4" />
+                    <span class="conv-check__box" aria-hidden="true">
+                        <svg class="conv-check__icon" viewBox="0 0 14 11" fill="none">
+                            <path d="M1 5.5L5 9.5L13 1" stroke="white" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="conv-check__label">인테리어 무료 견적 이벤트 · 카카오 광고</span>
+                </label>
+            </li>
+            <li class="conv-list__item" data-ad-seq="5">
+                <label class="conv-check">
+                    <input class="conv-check__input" type="checkbox" value="5" />
+                    <span class="conv-check__box" aria-hidden="true">
+                        <svg class="conv-check__icon" viewBox="0 0 14 11" fill="none">
+                            <path d="M1 5.5L5 9.5L13 1" stroke="white" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="conv-check__label">여름 헬스 프로모션 PT 상담 · 구글 광고</span>
+                </label>
+            </li>
+        </ul>
+
+        <!-- 최대 선택 안내 -->
+        <p class="conv-limit-msg hidden" id="limitMsg">최대 5개까지 선택할 수 있습니다.</p>
+    </section>
+
+    <!-- 선택 버튼 -->
+    <div class="conv-action" id="convAction">
+        <p class="conv-action__msg" id="selectMsg">선택하신 광고를 비교합니다.</p>
+        <button type="button" class="btn conv-action__btn" id="btnSelect">
+            선택
+            <span class="conv-action__count" id="selectCount">(2/5)</span>
+        </button>
+    </div>
+
+</main>
+
+<nav class="tabbar" aria-label="주메뉴">
+    <a class="tabbar__item" href="04-home-dashboard.html">
+        <span class="tabbar__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12L12 4l9 8M5 10v10h5v-6h4v6h5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="tabbar__label">홈</span>
+    </a>
+    <a class="tabbar__item" href="05-callpage-list.html">
+        <span class="tabbar__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h10l4 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M16 3v4h4" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 11.5a1 1 0 0 1 1-1l1.5 1.5a1 1 0 0 0 0 1.5l1 1a1 1 0 0 0 1.5 0l1.5 1.5a1 1 0 0 1-1 1c-2.8 0-5.5-2.7-5.5-5.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+        <span class="tabbar__label">콜페이지</span>
+    </a>
+    <a class="tabbar__item" href="08-consult-list.html">
+        <span class="tabbar__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+        <span class="tabbar__label">상담</span>
+    </a>
+    <a class="tabbar__item tabbar__item--active" href="10-stats-select.html">
+        <span class="tabbar__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 20V11M12 20V4M19 20v-7M3 20h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <span class="tabbar__label">분석</span>
+    </a>
+    <a class="tabbar__item" href="12-mypage.html">
+        <span class="tabbar__icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <span class="tabbar__label">관리</span>
+    </a>
+</nav>
+
+<script src="js/ui.js"></script>
+<script src="js/common.js"></script>
+<div style="text-align:center;padding:8px;font-size:11px;color:#aaa;margin-top:80px;">
+    <a href="00-index.html">← 목차</a> | 10 전환분석 선택
+</div>
+</body>
+</html>

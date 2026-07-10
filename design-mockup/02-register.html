@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>회원가입</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="topbar__lead">
+        <button type="button" class="topbar__btn topbar__btn--back" aria-label="뒤로가기">
+            <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                <path d="M9 1L1 9L9 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <a class="topbar__logo"><img src="images/callpage-web-logo.png" alt="CallPage" style="height:22px;"></a>
+    </div>
+    <div class="topbar__title"></div>
+    <div class="topbar__trail"></div>
+</header>
+
+<main class="page page--auth">
+
+    <section class="auth-hero auth-hero--compact">
+        <h1 class="auth-title">회원가입</h1>
+        <p class="auth-sub">이메일 인증 후 전화 한 통으로 가입이 완료됩니다</p>
+    </section>
+
+    <form class="auth-form">
+
+        <div class="field">
+            <label class="field__label" for="email">이메일</label>
+            <input id="email" name="email" class="input"
+                   type="email"
+                   placeholder="example@email.com"
+                   inputmode="email"
+                   autocomplete="email" />
+            <p class="field__help">입력하신 이메일로 인증 링크를 보내드려요</p>
+        </div>
+
+        <div class="agreement">
+            <label class="agreement__row agreement__row--all">
+                <input class="agreement__input" type="checkbox" id="agreeAll" />
+                <span class="agreement__check">
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8.5l3 3 7-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="agreement__label agreement__label--all">전체 동의</span>
+            </label>
+
+            <label class="agreement__row">
+                <input class="agreement__input" type="checkbox" id="agreeTerms" checked />
+                <span class="agreement__check">
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8.5l3 3 7-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="agreement__label"><span class="agreement__required">(필수)</span> 이용약관 동의</span>
+                <a class="agreement__view" href="#">보기</a>
+            </label>
+
+            <label class="agreement__row">
+                <input class="agreement__input" type="checkbox" id="agreePrivacy" checked />
+                <span class="agreement__check">
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8.5l3 3 7-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="agreement__label"><span class="agreement__required">(필수)</span> 개인정보 처리방침 동의</span>
+                <a class="agreement__view" href="#">보기</a>
+            </label>
+
+            <label class="agreement__row">
+                <input class="agreement__input" type="checkbox" id="agreeMarketing" />
+                <span class="agreement__check">
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8.5l3 3 7-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="agreement__label"><span class="agreement__optional">(선택)</span> 마케팅 정보 수신 동의</span>
+                <a class="agreement__view" href="#">보기</a>
+            </label>
+        </div>
+
+        <button type="button" class="btn btn--block auth-form__submit">이메일 인증하기</button>
+    </form>
+
+    <div class="auth-footer">
+        <span>이미 회원이신가요?</span>
+        <a class="auth-footer__link" href="01-login.html">로그인</a>
+    </div>
+
+</main>
+
+<script src="js/ui.js"></script>
+<script src="js/common.js"></script>
+<div style="text-align:center;padding:8px;font-size:11px;color:#aaa;margin-top:20px;">
+    <a href="00-index.html">← 목차</a> | 02 회원가입
+</div>
+</body>
+</html>
