@@ -1,0 +1,128 @@
+$blue: #0f55ee;
+$white: #fff;
+$red: #ec2e12;
+$gray: #171f29;
+$gray_33: #333333;
+
+// 기존 부트스트랩 변수 업데이트
+$primary: $blue;
+$secondary: $gray;
+$danger: $red;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "danger": $danger,
+);
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 0.75,
+  4: $spacer,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+  7: $spacer * 1.75,
+  8: $spacer * 2,
+  9: $spacer * 2.25,
+  10: $spacer * 2.5,
+  11: $spacer * 2.75,
+  12: $spacer * 3,
+  13: $spacer * 3.25,
+  14: $spacer * 3.5,
+  15: $spacer * 3.75,
+  16: $spacer * 4,
+  17: $spacer * 5,
+  18: $spacer * 6,
+  19: $spacer * 7,
+  20: $spacer * 8,
+) !default;
+
+$min-contrast-ratio: 2;
+
+$enable-rounded: false;
+$enable-negative-margins: true;
+$enable-reduced-motion: false;
+$enable-validation-icons: false;
+$enable-rfs: false;
+
+$border-color: #d0d6dd;
+
+$font-family-base: "Pretendard", system-ui, -apple-system, arial;
+$font-size-base: 1rem;
+
+$body-color: $gray_33;
+$body-color-dark: $white;
+
+$line-height-base: 1.5;
+
+$border-radius: 0.25rem;
+
+$paragraph-margin-bottom: 0;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1400px,
+  xxl: 1920px,
+);
+
+$container-max-widths: (
+  sm: 992px,
+  md: 1200px,
+  lg: 1400px,
+  xxl: 1632px,
+);
+
+$input-btn-font-size: 1rem;
+$input-btn-font-size-lg: 1rem;
+$input-btn-font-size-sm: 0.8125rem;
+$input-btn-line-height: 1.42857;
+$input-btn-padding-y: 0.8125rem;
+$input-btn-padding-x: 1.5rem;
+$input-btn-padding-y-sm: 0.3125rem;
+$input-btn-padding-x-sm: 12px;
+$input-btn-padding-y-lg: 16px;
+$input-btn-padding-x-lg: 24px;
+
+$input-focus-border-color: $primary;
+$input-border-radius: 0.75rem;
+$input-border-radius-sm: 0.25rem;
+$input-placeholder-color: $gray-99;
+
+$focus-ring-width: 0;
+$focus-ring-color: $primary;
+
+$btn-font-weight: 500;
+$btn-border-radius: 0.5rem;
+
+//$form-check-input-border: 1px solid $gray-60;
+$form-check-label-disabled-opacity: 0.4;
+$form-check-min-height: 1.25rem;
+
+$form-feedback-font-size: 0.8125rem;
+
+$form-label-font-weight: 500;
+$form-label-margin-bottom: 0.25rem;
+
+$form-text-margin-top: 0;
+
+$form-select-border-color: $border-color;
+$form-select-focus-box-shadow: none;
+$form-select-bg-size: 1.125rem 1.125rem;
+$form-select-indicator-color: #aab0b8;
+$form-select-indicator: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.25 7.125L9 10.875L12.75 7.125H5.25Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+
+$form-switch-transition: background-position 0.15s ease-in-out, background-color 0.1s;
+
+$alert-border-radius: 0.5rem;
+$alert-padding-y: 0.75rem;
+
+$dropdown-min-width: 124px;
+$dropdown-font-size: 0.875rem;
+$dropdown-padding-x: 0.5rem;
+$dropdown-item-padding-y: 0.5rem;

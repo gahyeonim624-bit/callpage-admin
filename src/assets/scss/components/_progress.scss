@@ -1,0 +1,21 @@
+.progress{
+  background: rgba(var(--UI_11), 1);
+  border-radius: 50rem;
+  height: 16px;
+  position: relative;
+  overflow: visible;
+  &::before{
+    content: "";
+    position: absolute;left: 0;top: 0;right: 0;bottom: 0;
+    border: 1px solid var(--UI_08);
+    border-radius: 50rem;
+  }
+}
+
+.progress-bar{
+  background: #B1CBDD;
+  border-radius: 50rem;
+  overflow: visible;
+  position: absolute;left: 0;top: 0;bottom: 0;
+
+}

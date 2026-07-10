@@ -1,0 +1,42 @@
+.top-background{
+    width: 100%;
+    margin-top: 92px;
+    position: relative;
+    overflow: hidden;
+}
+
+.h-788{
+    height: 788px;
+}
+
+.mt288{
+    margin-top: 288px;
+}
+
+.top-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(20,20,20,0.55) 0%, rgba(20,20,20,0.75) 100%);
+    pointer-events: none;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff;
+    h1{
+        font-weight: 800;
+        font-style: ExtraBold;
+        font-size: 80px;
+        line-height: 130%;
+        letter-spacing: 0%;
+    }
+    p{
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: -2%;
+        text-align: center;
+    }
+}

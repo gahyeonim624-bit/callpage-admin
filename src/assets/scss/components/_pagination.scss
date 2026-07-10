@@ -1,0 +1,7 @@
+.pagination{
+  margin-top: .75rem;
+  @include media-breakpoint-up(lg){
+    margin-top: 1.5rem;
+  }
+  .material-icons{font-size: 17px;vertical-align: middle;margin-left: -4px;margin-right: -4px;}
+}

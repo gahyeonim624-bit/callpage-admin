@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>(pagelist)callpage-admin</title>
+  @@include('@@webRoot/html/_include/_head.html')
+  <style>
+    body {
+      background-color: #fff;
+      padding: 20px;
+      position: relative;
+      height: auto;
+      font-size: 13px;
+      overflow: auto !important;
+      padding-top: calc(constant(safe-area-inset-top) + 20px);
+      padding-top: calc(env(safe-area-inset-top) + 20px);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      max-width: 980px;
+      border-collapse: collapse;
+      margin: 0 auto;
+      white-space: nowrap;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #a7c7c7;
+      padding: 1px 10px;
+      word-break: keep-all;
+    }
+
+    table th {
+      background: #005151;
+      color: #fff;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    table td a {
+      color: #005151;
+      text-decoration: none;
+    }
+
+    table td a:hover {
+      text-decoration: underline;
+    }
+
+    table tbody tr {
+      cursor: pointer;
+    }
+
+    table tbody tr:hover {
+      background-color: #eefcef;
+    }
+
+    .noteTable {
+      display: table;
+      width: 100%;
+    }
+
+    .noteTable .date {
+      display: table-cell;
+      color: #ff523c;
+      width: 40px;
+    }
+
+    .noteTable .note {
+      display: table-cell;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .bg {
+      background: #fff5f5;
+    }
+
+    ul.float {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    ul.float li {
+      list-style: none;
+      border: 1px solid #ccc;
+      padding: 2px 5px;
+      display: inline-block;
+    }
+
+    .end {
+      background: #ffffcc;
+    }
+
+    .ing {
+      background: #f6b1a6;
+    }
+
+    .list {
+      text-align: center;
+      padding: 0 0 20px;
+    }
+
+    .list a {
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .list a:hover {
+      text-decoration: underline;
+    }
+
+    .box {
+      border: 2px dotted #aaa;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .box>ul {
+      display: inline-block;
+      text-align-last: left;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>callpage-admin PAGELIST</h1>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Depth 1</th>
+        <th>Depth 2</th>
+        <th>Depth 3</th>
+        <th>Depth 4</th>
+        <th>File</th>
+        <th>pageLink</th>
+        <th></th>
+        <th></th>
+        <th>Popup/Modal</th>
+      </tr>
+    </thead>
+    <tbody id="pageList">
+      <tr>
+        <td></td>
+        <td>home</td>
+        <td>온보딩</td>
+        <td>신규사용자</td>
+        <td></td>
+        <td></td>
+        <td>/home/</td>
+        <td>
+          <a target="_blank" href="@@webRoot/html/pages/home/new-user-registration.html">new-user-registration.html</a>
+        </td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    var leng = document.querySelectorAll("tbody td a");
+    console.log(leng.length);
+    // var rows = document.getElementById("pageList").getElementsByTagName("tr");
+    // console.log(rows.length);
+    $("#pageList tr").on("click", function (e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      const href = $(this).find("a").attr("href");
+      window.open(href);
+    });
+  </script>
+</body>
+
+</html>

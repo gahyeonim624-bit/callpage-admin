@@ -1,0 +1,21 @@
+.page-breadcrumb {
+  .breadcrumb {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+  .breadcrumb-item {
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+  }
+}
