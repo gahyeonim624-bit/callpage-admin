@@ -1,0 +1,60 @@
+.modal-backdrop {
+  & + .modal-backdrop {
+    --bs-backdrop-zindex: 1056;
+    & + .modal-backdrop {
+      --bs-backdrop-zindex: 1058;
+    }
+  }
+}
+
+.modal {
+  --bs-modal-padding: 1.5rem;
+  --bs-modal-header-padding: 1rem;
+  --bs-modal-inner-border-radius: 0.5rem;
+  --bs-modal-border-width: 0;
+  --bs-modal-footer-border-width: 0;
+  --bs-modal-margin: 1rem;
+  overflow: hidden;
+  &.second {
+    --bs-modal-zindex: 1057;
+  }
+  &.third {
+    --bs-modal-zindex: 1059;
+  }
+  @include media-breakpoint-up(md) {
+    --bs-modal-header-padding: 1.5rem;
+  }
+}
+
+.modal-dialog {
+  //max-width: $modal-xl !important
+}
+
+.modal-content {
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 1);
+}
+
+.modal-header {
+  .btn-close {
+    --bs-btn-close-opacity: 1;
+    --bs-btn-close-hover-opacity: 1;
+    --bs-btn-close-bg: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 19L5 5M19 5L5 19' stroke='%2326282C' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    margin: 0;
+    padding: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    background-position: 0 0;
+    background-size: contain;
+  }
+}
+
+.modal-title {
+  font-weight: 700;
+}
+
+.modal-body {
+}
+
+.modal-footer {
+}

@@ -1,0 +1,20 @@
+{
+  "doctype-first": false,
+  "head-req-title": false,
+  "indent-style": "spaces",
+  "indent-width": 2,
+  "class-style": "dash",
+  "id-class-style": false,
+  "img-req-alt": "allownull",
+  "attr-name-style": false,
+  "attr-bans": ["!style"],
+  "tag-bans": ["!style", "!i"],
+  "tag-name-lowercase": false,
+  "link-req-noopener": false,
+  "line-end-style": false,
+  "id-class-no-ad": false,
+  "raw-ignore-regex": "@@for.*{",
+  "line-no-trailing-whitespace": false,
+  "spec-char-escape": false
+}
+

@@ -1,0 +1,33 @@
+#footer-mo {
+  padding: 40px 0;
+  background-color: #fff;
+  .logo {
+    margin-bottom: 18px;
+  }
+  .text-wrap {
+    margin-bottom: 18px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    vertical-align: middle;
+    color: #0e0f10;
+  }
+  .info {
+    li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      i {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  .copy {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    vertical-align: middle;
+    color: #8a8f96;
+  }
+}

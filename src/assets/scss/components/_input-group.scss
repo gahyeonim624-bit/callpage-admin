@@ -1,0 +1,29 @@
+.input-group{
+  position: relative;
+  &:focus-within{
+    .form-control{
+      border-color: $primary;
+    }
+  }
+  .form-control{
+    border-radius: $input-border-radius !important;
+    &:focus{z-index: initial;}
+  }
+
+  .icon-button{
+    position: absolute;
+    right: 1px;top: 1px;z-index: 4;
+    padding: 0 15px;
+    height: calc(100% - 2px);
+    max-height: 44px;
+    line-height: 1;
+    border: 0;
+    @include transition($input-transition);
+  }
+
+  .form-control-sm{
+    & + .icon-button{
+      padding: 0 $input-padding-x-sm;;
+    }
+  }
+}

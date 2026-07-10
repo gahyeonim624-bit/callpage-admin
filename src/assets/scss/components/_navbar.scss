@@ -1,0 +1,35 @@
+.navbar-brand {
+  --bs-navbar-brand-padding-y: 0;
+  --bs-navbar-brand-font-size: 20px;
+  font-family: "ClashDisplay-Variable";
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-link {
+  font-weight: 700;
+  padding: 0 !important;
+}
+
+.navbar {
+  --bs-navbar-padding-y: 1.25rem;
+}
+
+.navbar-nav {
+  gap: 39px;
+  align-items: center;
+  @include media-breakpoint-down(lg) {
+    flex-direction: row;
+  }
+}

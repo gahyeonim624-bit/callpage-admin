@@ -1,0 +1,12 @@
+.form-control {
+  background-color: #ffffff1a;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  &::placeholder {
+    color: #fff;
+  }
+}

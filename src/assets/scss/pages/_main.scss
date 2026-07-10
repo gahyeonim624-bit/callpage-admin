@@ -1,0 +1,585 @@
+// 애니메이션 정의
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-main-mo {
+  background-color: #ffffff;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+
+  .layout {
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .layout-header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    .navbar {
+      padding: 17px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  // 공통 배지 스타일
+  .badge {
+    display: inline-block;
+    background-color: #0a9fa8;
+    color: #f8f8fb;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+
+    &.dark {
+      background-color: #2f343b;
+    }
+  }
+
+  // 공통 이미지 플레이스홀더
+  .img-placeholder {
+    background-color: #eef4f4;
+    border: 1px dashed #b2dfdb;
+    border-radius: 12px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    overflow: hidden;
+
+    &::after {
+      content: "IMAGE PLACEHOLDER";
+      color: #00796b;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      opacity: 0.5;
+    }
+  }
+
+  // 공통 타이틀 스타일
+  .title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #0e0f10;
+    margin-bottom: 20px;
+    word-break: keep-all;
+  }
+
+  // 1. Visual Section
+  .section-mo-visual {
+    text-align: center;
+    background-image: url("../images/visual.png");
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+
+    .visual-title {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: #191f29;
+      word-break: keep-all;
+    }
+  }
+
+  // 2. Intro Section
+  .section-mo-intro {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #ffffff;
+
+    .title {
+      color: #0e0f10;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .desc-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .desc {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #2f343b;
+      margin: 0;
+      word-break: keep-all;
+    }
+  }
+
+  // 3. Why Call Page Section
+  .section-mo-why {
+    text-align: center;
+    background-color: #ffffff;
+
+    .title {
+      color: #0e0f10;
+      font-size: 22px;
+      font-weight: 600;
+      margin: 20px 0;
+    }
+
+    .why-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      li {
+        background-color: #ebf6f8;
+        border-radius: 120px;
+        padding: 16px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #2f343b;
+        text-align: center;
+        transition: transform 0.2s, opacity 0.4s;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+    }
+
+    .sub-desc {
+      font-size: 16px;
+      font-weight: 600;
+      color: #2f343b;
+      margin: 0;
+    }
+  }
+
+  // 4. Worry Section
+  .section-mo-worry {
+    padding: 60px 0;
+
+    .bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: left;
+
+      li {
+        font-size: 14px;
+        line-height: 1.4;
+        color: #2f343b;
+        word-break: keep-all;
+        letter-spacing: -3%;
+      }
+    }
+  }
+
+  // 5. Reservation Section
+  .section-mo-reservation {
+    .reservation-img {
+      height: 220px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+
+      .feature-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #2f343b;
+        margin-bottom: 10px;
+      }
+
+      .feature-desc {
+        font-size: 16px;
+        line-height: 1.4;
+        color: #2f343b;
+        margin: 0;
+        word-break: keep-all;
+      }
+    }
+  }
+
+  // 6. User System Section
+  .section-mo-system {
+    padding: 60px 0;
+    text-align: center;
+
+    .title {
+      margin-bottom: 40px;
+    }
+
+    .system-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .step-card {
+      background-color: #F8F8FB;
+      border-radius: 30px 30px 0 0;
+      padding: 40px 43px 0;
+
+      .step-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #0e0f10;
+        margin-bottom: 8px;
+      }
+
+      .step-desc {
+        font-size: 16px;
+        line-height: 1.4;
+        color: #2f343b;
+        margin: 0;
+        word-break: keep-all;
+        margin-bottom: 20px;
+        letter-spacing: -3%;
+      }
+    }
+  }
+
+  // 6-1. Business Impact Section
+  .section-mo-business {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #F2FAFB;
+
+    .business-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .business-card {
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 16px 24px;
+
+      img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .business-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #0E0F10;
+        margin: 0 0 10px;
+      }
+
+      .business-details {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        li {
+          position: relative;
+          padding-left: 12px;
+          font-size: 16px;
+          line-height: 1.4;
+          color: #2f343b;
+          word-break: keep-all;
+          letter-spacing: -3%;
+
+          &::before {
+            content: "•";
+            font-size: 12px;
+            position: absolute;
+            left: 0;
+            color: #2F343B;
+          }
+        }
+      }
+    }
+  }
+
+  // 7. Service Info Section
+  .section-mo-info {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 60px;
+
+    .info-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-card {
+      border: 1px solid #0a9fa8;
+      border-radius: 16px;
+      padding: 16px;
+      text-align: left;
+
+      .info-header {
+        margin-bottom: 20px;
+      }
+
+      .info-step-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #0e0f10;
+        line-height: 1.3;
+        margin: 0;
+        word-break: keep-all;
+      }
+
+      .img {
+        display: flex;
+        justify-content: center;
+      }
+
+      .info-details {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li {
+          font-size: 14px;
+          line-height: 1.4;
+          color: #2f343b;
+          word-break: keep-all;
+          display: flex;
+          gap: 20px;
+          letter-spacing: -3%;
+
+          strong {
+            color: #2f343b;
+            font-weight: 700;
+            display: inline-block;
+            flex-shrink: 0;
+            width: 56px;
+          }
+        }
+      }
+    }
+  }
+
+  // 8. Company Info Section
+  .section-mo-company {
+    padding: 60px 0;
+    text-align: center;
+
+    .text-wrap {
+      background-color: #ebf6f8;
+      padding: 24px 0 0;
+      border-radius: 20px;
+
+      .title {
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+    }
+
+    .text-primary {
+      color: #0a9fa8 !important;
+    }
+
+    .desc {
+      font-size: 16px;
+      color: #0e0f10;
+      margin-bottom: 20px;
+
+      .text-primary {
+        font-weight: 600;
+      }
+    }
+
+    .btn-wrap {
+      margin-top: 20px;
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+
+      .btn {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 9px;
+        background-color: #0a9fa8;
+      }
+
+      i {
+        width: 20px;
+        height: 20px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .icon-download {
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5 12.5V15.8333C17.5 16.2754 17.3244 16.6993 17.0118 17.0118C16.6993 17.3244 16.2754 17.5 15.8333 17.5H4.16667C3.72464 17.5 3.30072 17.3244 2.98816 17.0118C2.67559 16.6993 2.5 16.2754 2.5 15.8333V12.5' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.83203 8.3335L9.9987 12.5002L14.1654 8.3335' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 12.5V2.5' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
+
+      .icon-phone {
+        background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.3351 14.0999V16.5999C18.3361 16.832 18.2886 17.0617 18.1956 17.2744C18.1026 17.487 17.9662 17.6779 17.7952 17.8348C17.6242 17.9917 17.4223 18.1112 17.2024 18.1855C16.9826 18.2599 16.7496 18.2875 16.5185 18.2666C13.9542 17.988 11.491 17.1117 9.32682 15.7083C7.31334 14.4288 5.60626 12.7217 4.32682 10.7083C2.91846 8.53425 2.04202 6.05908 1.76848 3.48325C1.74766 3.25281 1.77505 3.02055 1.8489 2.80127C1.92275 2.58199 2.04146 2.38049 2.19745 2.2096C2.35345 2.03871 2.54332 1.90218 2.75498 1.80869C2.96663 1.7152 3.19543 1.6668 3.42682 1.66658H5.92682C6.33124 1.6626 6.72331 1.80582 7.02995 2.06953C7.33659 2.33324 7.53688 2.69946 7.59348 3.09992C7.699 3.89997 7.89469 4.68552 8.17682 5.44158C8.28894 5.73985 8.3132 6.06401 8.24674 6.37565C8.18028 6.68729 8.02587 6.97334 7.80182 7.19992L6.74348 8.25825C7.92978 10.3445 9.65719 12.072 11.7435 13.2583L12.8018 12.1999C13.0284 11.9759 13.3144 11.8215 13.6261 11.755C13.9377 11.6885 14.2619 11.7128 14.5601 11.8249C15.3162 12.107 16.1018 12.3027 16.9018 12.4083C17.3066 12.4654 17.6763 12.6693 17.9406 12.9812C18.2049 13.2931 18.3453 13.6912 18.3351 14.0999Z' stroke='white' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+
+  // Floating Bottom Bar
+  .floating-bar-mo {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 475px;
+    background-color: #ffffff;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+    padding: 12px 16px;
+    display: flex;
+    gap: 10px;
+    z-index: 200;
+
+    .btn {
+      flex: 1;
+      padding: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background-color: #00796b;
+      color: #ffffff;
+      border: 1px solid #00796b;
+    }
+
+    .btn-outline-primary {
+      background-color: #ffffff;
+      color: #00796b;
+      border: 1px solid #00796b;
+    }
+  }
+
+  // Footer Style
+  .footer-mo {
+    background-color: #ffffff;
+    border-top: 1px solid #ced3d8;
+    text-align: left;
+
+    .footer-delivered {
+      display: flex;
+      align-items: flex-end;
+      gap: 4px;
+      margin-bottom: 18px;
+
+      .text {
+        font-size: 12px;
+        color: #2f343b;
+      }
+    }
+
+    .footer-links-mo {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+
+      .link-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        .icon-circle {
+          width: 36px;
+          height: 36px;
+          background-color: #8a8f96;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        .info-text {
+          display: flex;
+          flex-direction: column;
+          color: #2f343b;
+          line-height: 1.5;
+          font-size: 12px;
+
+          .label {
+            font-weight: 400;
+          }
+
+          .val {
+            font-weight: 600;
+            text-decoration: none;
+            word-break: break-all;
+          }
+        }
+      }
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: #8a8f96;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

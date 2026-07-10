@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>(guide)call2b</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover" />
+    <title>call2b</title>
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- <link rel="icon" type="image/png" href="../assets/images/favicon.ico" sizes="32x32" /> -->
+
+    <!-- library css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="../assets/lib/swiper/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- library js -->
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- publishing css -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+
+  <body>
+    <style>
+      body {
+        background: transparent;
+      }
+
+      #guide {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      #guide-sidebar {
+        position: sticky;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        background: #000;
+        border-right: 1px solid #ddd;
+      }
+
+      #guide-sidebar h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      #guide-sidebar a {
+        color: #ffcaca;
+        font-size: 16px;
+        font-weight: 700;
+        display: block;
+        padding: 0.75rem 1rem;
+      }
+
+      #guide-sidebar a:hover {
+        text-decoration: underline;
+      }
+
+      #guide-sidebar a::before {
+        content: '- ';
+      }
+
+      #guide-container {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+      }
+
+      .gulp-guide {
+        padding: 0 1rem 1rem;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      section {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        flex: 0 0 50%;
+        overflow: hidden;
+      }
+
+      section h2 {
+        display: inline-block;
+        background: rgb(179, 204, 241);
+        padding: 3px 8px 1px;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      section h2::before {
+        content: '- ';
+      }
+
+      section.active h2 {
+        background: rgb(255, 65, 65);
+        color: #fff;
+      }
+
+      section.active h2::before {
+        content: '> ';
+      }
+
+      .sqaure {
+        width: 50px;
+        height: 50px;
+        border-radius: 0.25rem;
+      }
+    </style>
+    <div id="guide">
+      <div id="guide-sidebar">
+        <h1>Component Guide</h1>
+        <div class="gulp-guide">
+          gulp(걸프) 사용 방법
+          <ol>
+            <li>1. $ npm install --global gulp-cli</li>
+            <li>2. $ npm install</li>
+            <li>3. $ gulp</li>
+          </ol>
+        </div>
+        <a href="#g1">Color</a>
+        <a href="#g2">Text</a>
+        <a href="#g3">Buttons</a>
+        <a href="#g4">Text Field</a>
+        <a href="#g5">Checkbox</a>
+        <a href="#g6">Radio</a>
+        <a href="#g7">Badge</a>
+        <a href="#g8">Alert</a>
+      </div>
+      <div id="guide-container">
+        <section id="g2">
+          <h2>Text</h2>
+          <div>
+            <div style="margin-bottom: 0.5rem">
+              <div>
+                <span class="text-primary">text primary</span>
+                <span class="text-secondary">text secondary</span>
+                <span class="text-info">text info</span>
+                <span class="text-danger">text danger</span>
+              </div>
+              <div class="text-decoration-underline">Text Underline</div>
+              <div class="fw-medium">Text Medium(500)</div>
+              <div class="fw-bold">Text Bold(700)</div>
+            </div>
+            <div class="text-start">좌측 정렬 .text-start</div>
+            <div class="text-center">가운데 정렬 .text-center</div>
+            <div class="text-end">우측 정렬 .text-end</div>
+          </div>
+        </section>
+        <section id="g3">
+          <h2>Buttons</h2>
+          <div>
+            <style>
+              .btn + .btn {
+                margin-top: 0.5rem;
+              }
+            </style>
+
+            <p>sm 36px</p>
+            <button type="button" class="btn btn-secondary btn-sm w-100">버튼</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm w-100">버튼</button>
+
+            <p>md</p>
+            <button type="button" class="btn btn-secondary w-100">버튼</button>
+            <button type="button" class="btn btn-outline-secondary w-100">버튼</button>
+
+            <p>lg</p>
+            <button type="button" class="btn btn-secondary btn-lg w-100">버튼명</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg w-100">버튼</button>
+          </div>
+        </section>
+        <section id="g4">
+          <style></style>
+          <h2>Text Field</h2>
+          <div class="vstack gap-1">
+            <input type="text" class="form-control form-control-sm" />
+            <div class="form-text">
+              <i class="icon-help"></i>
+              8~16자리의 영대문자, 영소문자, 숫자, 특수문자 조합 필수. <br />
+              아이디 포함 및 동일한 숫자 혹은 문자를 3번 이상 연속으로 사용 불가.
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="placeholder" value="Active" />
+              <!-- input focus 되었을 때 삭제버튼 노출 -->
+              <button class="icon-button" type="button" aria-label="삭제">
+                <i class="icon-input-x"></i>
+              </button>
+            </div>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="placeholder" value="Readonly" readonly />
+            </div>
+            <div class="valid-feedback" style="display: block">Looks good!</div>
+            <input type="text" class="form-control is-invalid" placeholder="placeholder" value="ERROR" />
+            <div class="invalid-feedback" style="display: block"><i class="icon-error"></i>Error Message</div>
+            <input type="text" class="form-control" placeholder="placeholder" value="disabled" disabled />
+            <div class="form-group">
+              <label for="formPassword" class="form-label">레이블</label>
+              <input type="password" class="form-control" placeholder="form-control" id="formPassword" />
+              <p class="form-text">* 최소 10글자 이상으로 영문, 숫자, 특수문자 2개 이상 조합 동일한 숫자</p>
+            </div>
+
+            form-select
+            <select class="form-select">
+              <option value="">선택</option>
+            </select>
+
+            <textarea rows="2" class="form-control" placeholder="내용을 입력해 주세요." maxlength="300"></textarea>
+            <textarea rows="2" class="form-control is-invalid" placeholder="내용을 입력해 주세요." maxlength="300"></textarea>
+          </div>
+        </section>
+        <section id="g7">
+          <h2>Badge</h2>
+          <div></div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      var btns = document.querySelectorAll('#guide-sidebar a');
+      btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var target = btn.hash;
+          var sectionsAll = document.querySelectorAll('section');
+          sectionsAll.forEach(function (sec) {
+            sec.classList.remove('active');
+          });
+          document.querySelector(target).classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>
