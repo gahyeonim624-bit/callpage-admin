@@ -4,6 +4,41 @@
   left: 0;
   right: 0;
   z-index: 100;
+  max-width: 430px;
+  margin: 0 auto;
   transition: all 0.5s ease;
   background: #fff;
+
+  #navbarHeader {
+    height: $header-height;
+    padding: 0 16px;
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 20px;
+  }
+}
+
+.header-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 40px;
+  background-color: #E1E8EA;
+}
+
+.header-toggle-btn {
+  @include typography(12px, 600);
+  padding: 4px 12px;
+  border: 0;
+  border-radius: 24px;
+  background-color: transparent;
+  color: #2F343B;
+  white-space: nowrap;
+
+  &.active {
+    background-color: #099FA7;
+    color: #fff;
+  }
 }

@@ -1,20 +1,49 @@
 <!DOCTYPE html>
-<html lang="ko" data-bs-theme="dark">
+<html lang="ko">
 
 <head>
   @@include('@@webRoot/html/_include/_head.html')
 </head>
 
-<body class="page-main page-main-mo">
-  <div class="layout">
+<body class="page-home">
+  <div class="layout layout-app">
     <header class="layout-header">
       @@include('@@webRoot/html/_layouts/_layout-header.html')
     </header>
     <main class="layout-main">
+      <section class="home">
+        <div class="home-logo">
+          <img class="home-logo-img" src="@@webRoot/assets/images/logo.svg" alt="CallPage">
+          <p class="home-logo-desc">맥락이 있는 상담 연결</p>
+        </div>
+        <div class="home-guide">
+          <div class="home-guide-icon">
+            <img src="@@webRoot/assets/images/page-add.svg" alt="">
+          </div>
+          <h2 class="home-guide-title">먼저 콜페이지를 만들어 주세요</h2>
+          <p class="home-guide-desc">광고를 보고 들어온 고객이<br>바로 상담을 신청할 수 있는<br>나만의 랜딩페이지를 만들어 보세요.</p>
+        </div>
+        <ol class="home-steps">
+          <li class="home-steps-item">
+            <span class="home-steps-num">1</span>
+            <span class="home-steps-text">콜페이지를 만들어요</span>
+          </li>
+          <li class="home-steps-item">
+            <span class="home-steps-num">2</span>
+            <span class="home-steps-text">광고에 콜페이지 링크를 연결해요</span>
+          </li>
+          <li class="home-steps-item">
+            <span class="home-steps-num">3</span>
+            <span class="home-steps-text">고객 상담 요청을 받아요</span>
+          </li>
+        </ol>
+        <button type="button" class="btn btn-lg home-cta">콜페이지 만들기</button>
+      </section>
     </main>
-    @@include('@@webRoot/html/_layouts/_footer.html')
+    <footer class="layout-nav-wrap">
+      @@include('@@webRoot/html/_layouts/_layout-nav.html')
+    </footer>
   </div>
 </body>
-new-user-registration
 
 </html>

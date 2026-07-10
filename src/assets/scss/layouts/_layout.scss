@@ -21,9 +21,21 @@ body {
 
 .layout {
   min-height: 100vh;
-  max-width: 360px;
-  @media (min-width: 361px) {
+  max-width: 430px;
+  @media (min-width: 431px) {
     margin: 0 auto;
+  }
+}
+
+.layout-main {
+  padding-top: $header-height;
+}
+
+.layout-app {
+  background-color: $bg-app;
+
+  .layout-main {
+    padding-bottom: $layout-nav-height;
   }
 }
 

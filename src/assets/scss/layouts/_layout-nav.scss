@@ -1,0 +1,56 @@
+.layout-nav-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $layout-nav-zindex;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.layout-nav {
+  display: flex;
+  height: $layout-nav-height;
+  background-color: #fff;
+}
+
+$layout-nav-icons: home, call, advice, analysis, management;
+
+.layout-nav-item {
+  @include flex-column();
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: #A1A7A7;
+  text-decoration: none;
+
+  i {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+  }
+
+  @each $icon in $layout-nav-icons {
+    i.nav-#{$icon} {
+      background-image: url("../images/nav-#{$icon}.svg");
+    }
+  }
+
+  span {
+    @include typography(11px, 500);
+  }
+
+  &.active {
+    color: $teal;
+
+    @each $icon in $layout-nav-icons {
+      i.nav-#{$icon} {
+        background-image: url("../images/nav-#{$icon}-active.svg");
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" data-bs-theme="dark">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-Compatible" content="IE=edge" />
@@ -17,44 +17,78 @@
     <!-- publishing css -->
     <link rel="stylesheet" href="../../../assets/css/bootstrap.css" />
     <link rel="stylesheet" href="../../../assets/css/style.css" />
+
+    <!-- publishing js -->
+    <script src="../../../assets/js/common.js" defer></script>
   </head>
 
-  <body class="page-main page-main-mo">
-    <div class="layout">
+  <body class="page-home">
+    <div class="layout layout-app">
       <header class="layout-header">
         <nav class="navbar navbar-expand-lg" id="navbarHeader">
-          <a class="navbar-brand" href="../../../html/pages/main/main.html">
-            <img class="logo" src="../../../assets/images/logo.svg" alt="LOGO" />
+          <a class="navbar-brand" href="../../../html/pages/home/dashboard.html">
+            <img class="logo" src="../../../assets/images/header-logo.svg" alt="CallPage" />
           </a>
+          <div class="header-toggle" role="tablist">
+            <button type="button" class="header-toggle-btn active" role="tab" aria-selected="true">자동응대</button>
+            <button type="button" class="header-toggle-btn" role="tab" aria-selected="false">바로연결</button>
+          </div>
         </nav>
       </header>
-      <main class="layout-main"></main>
-      <footer id="footer">
-        <div class="container">
-          <div class="footer-left">
-            <div class="logo">
-              <img src="../../../assets/images/footer-logo.svg" alt="" />
-            </div>
-            <div class="text-wrap">
-              <p>서울특별시 금천구 서부샛길 606, B동 6층 606호 (가산동, 대성디폴리스지식산업센터)</p>
-              <ul class="info">
-                <li>
-                  <i class="icon-mail"></i>
-                  <span>contact@call2b.com</span>
-                </li>
-                <li>
-                  <i class="icon-phone"></i>
-                  <span>0508-0390-0000</span>
-                </li>
-              </ul>
-            </div>
+      <main class="layout-main">
+        <section class="home">
+          <div class="home-logo">
+            <img class="home-logo-img" src="../../../assets/images/logo.svg" alt="CallPage" />
+            <p class="home-logo-desc">맥락이 있는 상담 연결</p>
           </div>
-          <div class="copy">
-            <p>ⓒ 2026 deLimit. All rights reserved.</p>
+          <div class="home-guide">
+            <div class="home-guide-icon">
+              <img src="../../../assets/images/page-add.svg" alt="" />
+            </div>
+            <h2 class="home-guide-title">먼저 콜페이지를 만들어 주세요</h2>
+            <p class="home-guide-desc">광고를 보고 들어온 고객이<br />바로 상담을 신청할 수 있는<br />나만의 랜딩페이지를 만들어 보세요.</p>
           </div>
-        </div>
+          <ol class="home-steps">
+            <li class="home-steps-item">
+              <span class="home-steps-num">1</span>
+              <span class="home-steps-text">콜페이지를 만들어요</span>
+            </li>
+            <li class="home-steps-item">
+              <span class="home-steps-num">2</span>
+              <span class="home-steps-text">광고에 콜페이지 링크를 연결해요</span>
+            </li>
+            <li class="home-steps-item">
+              <span class="home-steps-num">3</span>
+              <span class="home-steps-text">고객 상담 요청을 받아요</span>
+            </li>
+          </ol>
+          <button type="button" class="btn btn-lg home-cta">콜페이지 만들기</button>
+        </section>
+      </main>
+      <footer class="layout-nav-wrap">
+        <nav class="layout-nav" id="layoutNav">
+          <a class="layout-nav-item active" href="../../../html/pages/home/home.html">
+            <i class="nav-home"></i>
+            <span>홈</span>
+          </a>
+          <a class="layout-nav-item" href="#">
+            <i class="nav-call"></i>
+            <span>콜페이지</span>
+          </a>
+          <a class="layout-nav-item" href="#">
+            <i class="nav-advice"></i>
+            <span>상담</span>
+          </a>
+          <a class="layout-nav-item" href="#">
+            <i class="nav-analysis"></i>
+            <span>분석</span>
+          </a>
+          <a class="layout-nav-item" href="#">
+            <i class="nav-management"></i>
+            <span>관리</span>
+          </a>
+        </nav>
       </footer>
     </div>
   </body>
-  new-user-registration
 </html>
