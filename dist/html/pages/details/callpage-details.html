@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover" />
+    <title>callpage-admin</title>
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- <link rel="icon" type="image/png" href="../../../assets/images/favicon.ico" sizes="32x32" /> -->
+
+    <!-- library css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <!-- library js -->
+    <script src="../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- publishing css -->
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../../assets/css/style.css" />
+
+    <!-- publishing js -->
+    <script src="../../../assets/js/common.js" defer></script>
+  </head>
+
+  <body class="page-details" data-nav-active="call">
+    <div class="layout layout-app">
+      <header class="layout-header">
+        <nav class="navbar navbar-sub" id="navbarHeader">
+          <div class="navbar-left">
+            <a class="navbar-back" href="../../../html/pages/home/dashboard.html">
+              <i class="icon-arrow-left"></i>
+            </a>
+            <h1 class="navbar-title">콜페이지</h1>
+          </div>
+          <div class="header-toggle" role="tablist">
+            <button type="button" class="header-toggle-btn active" role="tab" aria-selected="true">자동응대</button>
+            <button type="button" class="header-toggle-btn" role="tab" aria-selected="false">바로연결</button>
+          </div>
+        </nav>
+      </header>
+      <main class="layout-main">
+        <section class="create">
+          <div class="create-field-wrap">
+            <div class="create-field-group">
+              <label class="create-field-label">콜페이지 이름</label>
+              <div class="create-field">
+                <input type="text" class="create-input" value="노안교정 수술 이벤트" />
+              </div>
+            </div>
+          </div>
+
+          <h3 class="section-title mt-2"><span class="section-title-bar"></span>콜페이지 링크</h3>
+
+          <div class="create-field-wrap mt-2">
+            <div class="create-field-group">
+              <label class="create-field-label">광고 채널</label>
+              <div class="create-field">
+                <select class="create-input ad-channel-select" required>
+                  <option value="" disabled selected hidden>선택</option>
+                  <option value="instagram">인스타그램</option>
+                  <option value="homepage">홈페이지</option>
+                  <option value="naver-blog">네이버 블로그</option>
+                  <option value="youtube">유튜브</option>
+                  <option value="kakao-channel">카카오톡 채널</option>
+                  <option value="naver-cafe">네이버 카페</option>
+                  <option value="smartstore">스마트스토어</option>
+                  <option value="naver-place">네이버 플레이스</option>
+                  <option value="custom">직접입력</option>
+                </select>
+              </div>
+              <div class="create-field ad-channel-custom" hidden>
+                <input type="text" class="create-input" placeholder="광고 채널명을 입력해주세요." />
+              </div>
+            </div>
+
+            <div class="create-field-group">
+              <label class="create-field-label">콜페이지 링크</label>
+              <div class="create-field-copy">
+                <input type="text" class="create-input" value="http://callpage/connect/dhnwlef..." readonly />
+                <button type="button" class="copy-btn">복사</button>
+              </div>
+            </div>
+
+            <div class="link-actions">
+              <button type="button" class="btn btn-lg create-btn-preview">
+                <i class="icon-search-plus"></i>
+                미리보기
+              </button>
+              <button type="button" class="btn btn-lg create-btn-next">QR 코드 만들기</button>
+            </div>
+
+            <p class="create-desc m-0">상담을 위해 필요한 정보를 미리 질문해 보세요.</p>
+          </div>
+
+          <div class="create-field-wrap mt-2">
+            <div class="create-field-group">
+              <label class="create-field-label">콘텐츠 채널</label>
+              <div class="create-field">
+                <input type="text" class="create-input" value="인스타그램" />
+              </div>
+            </div>
+
+            <div class="create-field-group">
+              <label class="create-field-label">콘텐츠에 연결할 링크</label>
+              <div class="create-field-copy">
+                <input type="text" class="create-input" value="http://callpage/connect/dhnwlef..." readonly />
+                <button type="button" class="copy-btn">복사</button>
+              </div>
+            </div>
+
+            <div class="link-actions">
+              <button type="button" class="btn btn-lg create-btn-preview">
+                <i class="icon-search-plus"></i>
+                미리보기
+              </button>
+              <button type="button" class="btn btn-lg create-btn-next">QR 코드 다시 만들기</button>
+            </div>
+
+            <div class="qr-preview">
+              <img class="qr-preview-img" src="../../../assets/images/qr-placeholder.svg" alt="QR 코드" />
+              <div class="qr-preview-brand">
+                <img src="../../../assets/images/logo-112.svg" alt="CallPage" />
+              </div>
+            </div>
+
+            <button type="button" class="qr-save-btn">QR 저장</button>
+          </div>
+        </section>
+      </main>
+      <footer class="layout-nav-wrap">
+        <nav class="layout-nav" id="layoutNav">
+          <a class="layout-nav-item" data-nav="home" href="../../../html/pages/home/dashboard.html">
+            <i class="nav-home"></i>
+            <span>홈</span>
+          </a>
+          <a class="layout-nav-item" data-nav="call" href="#">
+            <i class="nav-call"></i>
+            <span>콜페이지</span>
+          </a>
+          <a class="layout-nav-item" data-nav="advice" href="#">
+            <i class="nav-advice"></i>
+            <span>상담</span>
+          </a>
+          <a class="layout-nav-item" data-nav="analysis" href="#">
+            <i class="nav-analysis"></i>
+            <span>분석</span>
+          </a>
+          <a class="layout-nav-item" data-nav="management" href="#">
+            <i class="nav-management"></i>
+            <span>관리</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

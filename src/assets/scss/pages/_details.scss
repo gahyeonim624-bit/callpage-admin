@@ -1,0 +1,93 @@
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  @include typography(16px, 700);
+  color: $gray_22;
+}
+
+.section-title-bar {
+  display: inline-block;
+  width: 4px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: $teal;
+}
+
+select.create-input {
+  height: 42px;
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 36px;
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  background-image: url("../images/icon-dropdown.svg");
+
+  &:invalid {
+    color: $gray_99;
+  }
+}
+
+.create-field-copy {
+  display: flex;
+  gap: 8px;
+
+  .create-input {
+    flex: 1;
+  }
+}
+
+.copy-btn {
+  flex-shrink: 0;
+  height: 40px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #5C6566;
+  @include typography(13px, 700);
+  color: #fff;
+}
+
+.link-actions {
+  display: flex;
+  gap: 8px;
+
+  .create-btn-preview {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.qr-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.qr-preview-img {
+  width: 200px;
+  height: 200px;
+}
+
+.qr-preview-brand {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 22px;
+  }
+}
+
+.qr-save-btn {
+  width: 100%;
+  height: 48px;
+  border: 0;
+  border-radius: 8px;
+  background-color: $teal;
+  @include typography(15px, 700);
+  color: #fff;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="page-home" data-nav-active="home">
+  <div class="layout layout-app">
+    <header class="layout-header">
+      @@include('@@webRoot/html/_layouts/_layout-header.html')
+    </header>
+    <main class="layout-main">
+      <section class="dashboard">
+        <div class="home-logo">
+          <img class="home-logo-img" src="@@webRoot/assets/images/logo.svg" alt="CallPage">
+          <p class="home-logo-desc">맥락이 있는 상담 연결</p>
+        </div>
+        <h2 class="dashboard-title">전화 응대 방식을 선택해 주세요.</h2>
+        <div class="answer-select">
+          <button type="button" class="answer-option selected">
+            <span class="answer-option-icon"><i class="icon-headset"></i></span>
+            <span class="answer-option-text">
+              <strong>자동 응대하기</strong>
+              <small>자동으로 전화를 응대하고 상담 접수</small>
+            </span>
+          </button>
+          <button type="button" class="answer-option">
+            <span class="answer-option-icon"><i class="icon-call-direct"></i></span>
+            <span class="answer-option-text">
+              <strong>바로 연결하기</strong>
+              <small>안심번호를 통해 모바일로 바로 연결</small>
+            </span>
+          </button>
+        </div>
+        <div class="stat-cards">
+          <div class="stat-card">
+            <p class="stat-card-num">3<span>건</span></p>
+            <p class="stat-card-label">금일 완료 상담</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-card-num">7<span>건</span></p>
+            <p class="stat-card-label stat-card-label--danger">총 미완료 상담</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="layout-nav-wrap">
+      @@include('@@webRoot/html/_layouts/_layout-nav.html')
+    </footer>
+  </div>
+</body>
+
+</html>

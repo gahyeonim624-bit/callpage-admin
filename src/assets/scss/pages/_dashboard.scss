@@ -1,0 +1,119 @@
+.dashboard {
+  padding: 40px 16px 24px;
+}
+
+.dashboard-title {
+  @include typography(15px, 600);
+  margin-bottom: 16px;
+  text-align: center;
+  color: #313A3A;
+}
+
+.answer-select {
+  @include flex-column();
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.answer-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #fff;
+  text-align: left;
+  transition: transform 0.15s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &-icon {
+    @include display-center();
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #EAF0F1;
+
+    i {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    strong {
+      @include typography(15px, 700);
+      color: #313A3A;
+    }
+
+    small {
+      @include typography(14px, 400);
+      color: #5C6566;
+    }
+  }
+
+  $answer-icons: headset, call-direct;
+  @each $icon in $answer-icons {
+    .icon-#{$icon} {
+      background-image: url("../images/icon-#{$icon}.svg");
+    }
+  }
+
+  &.selected {
+     background-color:#E9F7F7;
+       border: 2px solid $teal;
+
+
+    .answer-option-icon {
+      background-color: #00A2AA;
+    }
+  }
+}
+
+.stat-cards {
+  display: flex;
+  gap: 8px;
+}
+
+.stat-card {
+  @include flex-column();
+  flex: 1;
+  align-items: center;
+  gap: 12px;
+  padding: 32px;
+  border-radius: 12px;
+  background-color: #fff;
+
+  &-num {
+    @include typography(32px, 600);
+    color: #0F1212;
+
+    span {
+      @include typography(16px, 500);
+      margin-left: 1px;
+      color: #313A3A;
+    }
+
+  }
+
+  &-label {
+    @include typography(14px, 600);
+    color: #313A3A;
+
+    &--danger {
+      color: #FF383C;
+    }
+  }
+}

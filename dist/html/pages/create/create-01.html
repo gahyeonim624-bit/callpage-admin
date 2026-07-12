@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover" />
+    <title>callpage-admin</title>
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- <link rel="icon" type="image/png" href="../../../assets/images/favicon.ico" sizes="32x32" /> -->
+
+    <!-- library css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <!-- library js -->
+    <script src="../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- publishing css -->
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../../assets/css/style.css" />
+
+    <!-- publishing js -->
+    <script src="../../../assets/js/common.js" defer></script>
+  </head>
+
+  <body class="page-create" data-nav-active="call">
+    <div class="layout layout-app">
+      <header class="layout-header">
+        <nav class="navbar navbar-sub" id="navbarHeader">
+          <div class="navbar-left">
+            <a class="navbar-back" href="../../../html/pages/home/dashboard.html">
+              <i class="icon-arrow-left"></i>
+            </a>
+            <h1 class="navbar-title">콜페이지 만들기</h1>
+          </div>
+          <div class="header-toggle" role="tablist">
+            <button type="button" class="header-toggle-btn active" role="tab" aria-selected="true">자동응대</button>
+            <button type="button" class="header-toggle-btn" role="tab" aria-selected="false">바로연결</button>
+          </div>
+        </nav>
+      </header>
+      <main class="layout-main">
+        <section class="create">
+          <ol class="step-progress">
+            <li class="step-progress-item active">
+              <span class="step-progress-circle"><i class="icon-check-active"></i></span>
+              <span class="step-progress-label">이름 정하기</span>
+            </li>
+            <li class="step-progress-line"></li>
+            <li class="step-progress-item">
+              <span class="step-progress-circle"><i class="icon-check"></i></span>
+              <span class="step-progress-label">페이지 구성</span>
+            </li>
+            <li class="step-progress-line"></li>
+            <li class="step-progress-item">
+              <span class="step-progress-circle"><i class="icon-check"></i></span>
+              <span class="step-progress-label">광고 정보 등록</span>
+            </li>
+          </ol>
+          <p class="create-step">STEP 1/3</p>
+          <h2 class="create-title">이름 정하기</h2>
+          <p class="create-desc">광고명을 기준으로 콜페이지 이름을 입력해 주세요.</p>
+          <div class="create-field-wrap">
+            <div class="create-field">
+              <textarea class="create-input" rows="1" placeholder="예) 노안교정술 여름 이벤트 1" maxlength="30"></textarea>
+              <span class="create-counter"><span class="create-counter-current">0 </span>/ 30</span>
+            </div>
+          </div>
+          <div class="create-buttons">
+            <button type="button" class="btn btn-lg create-btn-preview">
+              <i class="icon-search-plus"></i>
+              미리보기
+            </button>
+            <button type="button" class="btn btn-lg create-btn-next">다음</button>
+          </div>
+        </section>
+      </main>
+      <footer class="layout-nav-wrap">
+        <nav class="layout-nav" id="layoutNav">
+          <a class="layout-nav-item" data-nav="home" href="../../../html/pages/home/dashboard.html">
+            <i class="nav-home"></i>
+            <span>홈</span>
+          </a>
+          <a class="layout-nav-item" data-nav="call" href="#">
+            <i class="nav-call"></i>
+            <span>콜페이지</span>
+          </a>
+          <a class="layout-nav-item" data-nav="advice" href="#">
+            <i class="nav-advice"></i>
+            <span>상담</span>
+          </a>
+          <a class="layout-nav-item" data-nav="analysis" href="#">
+            <i class="nav-analysis"></i>
+            <span>분석</span>
+          </a>
+          <a class="layout-nav-item" data-nav="management" href="#">
+            <i class="nav-management"></i>
+            <span>관리</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

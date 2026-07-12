@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover" />
+    <title>callpage-admin</title>
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- <link rel="icon" type="image/png" href="../../../assets/images/favicon.ico" sizes="32x32" /> -->
+
+    <!-- library css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <!-- library js -->
+    <script src="../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- publishing css -->
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../../assets/css/style.css" />
+
+    <!-- publishing js -->
+    <script src="../../../assets/js/common.js" defer></script>
+  </head>
+
+  <body class="page-home" data-nav-active="home">
+    <div class="layout layout-app">
+      <header class="layout-header">
+        <nav class="navbar navbar-expand-lg" id="navbarHeader">
+          <a class="navbar-brand" href="../../../html/pages/home/dashboard.html">
+            <img class="logo" src="../../../assets/images/header-logo.svg" alt="CallPage" />
+          </a>
+          <div class="header-toggle" role="tablist">
+            <button type="button" class="header-toggle-btn active" role="tab" aria-selected="true">자동응대</button>
+            <button type="button" class="header-toggle-btn" role="tab" aria-selected="false">바로연결</button>
+          </div>
+        </nav>
+      </header>
+      <main class="layout-main">
+        <section class="dashboard">
+          <div class="home-logo">
+            <img class="home-logo-img" src="../../../assets/images/logo.svg" alt="CallPage" />
+            <p class="home-logo-desc">맥락이 있는 상담 연결</p>
+          </div>
+          <h2 class="dashboard-title">전화 응대 방식을 선택해 주세요.</h2>
+          <div class="answer-select">
+            <button type="button" class="answer-option selected">
+              <span class="answer-option-icon"><i class="icon-headset"></i></span>
+              <span class="answer-option-text">
+                <strong>자동 응대하기</strong>
+                <small>자동으로 전화를 응대하고 상담 접수</small>
+              </span>
+            </button>
+            <button type="button" class="answer-option">
+              <span class="answer-option-icon"><i class="icon-call-direct"></i></span>
+              <span class="answer-option-text">
+                <strong>바로 연결하기</strong>
+                <small>안심번호를 통해 모바일로 바로 연결</small>
+              </span>
+            </button>
+          </div>
+          <div class="stat-cards">
+            <div class="stat-card">
+              <p class="stat-card-num">3<span>건</span></p>
+              <p class="stat-card-label">금일 완료 상담</p>
+            </div>
+            <div class="stat-card">
+              <p class="stat-card-num">7<span>건</span></p>
+              <p class="stat-card-label stat-card-label--danger">총 미완료 상담</p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="layout-nav-wrap">
+        <nav class="layout-nav" id="layoutNav">
+          <a class="layout-nav-item" data-nav="home" href="../../../html/pages/home/dashboard.html">
+            <i class="nav-home"></i>
+            <span>홈</span>
+          </a>
+          <a class="layout-nav-item" data-nav="call" href="#">
+            <i class="nav-call"></i>
+            <span>콜페이지</span>
+          </a>
+          <a class="layout-nav-item" data-nav="advice" href="#">
+            <i class="nav-advice"></i>
+            <span>상담</span>
+          </a>
+          <a class="layout-nav-item" data-nav="analysis" href="#">
+            <i class="nav-analysis"></i>
+            <span>분석</span>
+          </a>
+          <a class="layout-nav-item" data-nav="management" href="#">
+            <i class="nav-management"></i>
+            <span>관리</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
