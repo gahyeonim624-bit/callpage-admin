@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="page-analysis" data-nav-active="analysis">
+  <div class="layout layout-app">
+    <header class="layout-header">
+      <nav class="navbar navbar-sub" id="navbarHeader">
+        <h1 class="navbar-title">전환 분석</h1>
+        <div class="header-toggle" role="tablist">
+          <button type="button" class="header-toggle-btn active" role="tab" aria-selected="true">자동응대</button>
+          <button type="button" class="header-toggle-btn" role="tab" aria-selected="false">바로연결</button>
+        </div>
+      </nav>
+    </header>
+    <main class="layout-main">
+      <section class="analysis">
+        <div class="analysis-icon">
+          <img src="@@webRoot/assets/images/icon-analysis.svg" alt="">
+        </div>
+        <h2 class="analysis-title">전환 분석</h2>
+        <p class="analysis-desc">아래 등록된 콜투비 목록 중 분석을 원하시는<br>콜투비를 선택해 주세요.</p>
+
+        <div class="analysis-list">
+          <label class="analysis-item checkbox">
+            <input type="checkbox" checked>
+            <span class="checkbox-box"><i class="icon-check-active"></i></span>
+            <span class="analysis-item-text">강남구 부동산 매매 상담 / 네이버 부동산</span>
+          </label>
+          <label class="analysis-item checkbox">
+            <input type="checkbox" checked>
+            <span class="checkbox-box"><i class="icon-check-active"></i></span>
+            <span class="analysis-item-text">강남구 부동산 매매 상담 / 인스타그램</span>
+          </label>
+          <label class="analysis-item checkbox">
+            <input type="checkbox">
+            <span class="checkbox-box"><i class="icon-check-active"></i></span>
+            <span class="analysis-item-text">강남구 부동산 매매 상담 / 유튜브</span>
+          </label>
+          <label class="analysis-item checkbox">
+            <input type="checkbox">
+            <span class="checkbox-box"><i class="icon-check-active"></i></span>
+            <span class="analysis-item-text">인테리어 무료 견적 이벤트 / 카카오 광고</span>
+          </label>
+          <label class="analysis-item checkbox">
+            <input type="checkbox">
+            <span class="checkbox-box"><i class="icon-check-active"></i></span>
+            <span class="analysis-item-text">여름 헬스 프로모션 PT 상담 / 구글광고</span>
+          </label>
+        </div>
+
+        <button type="button" class="analysis-submit-btn">선택한 광고 분석하기</button>
+      </section>
+    </main>
+    <footer class="layout-nav-wrap">
+      @@include('@@webRoot/html/_layouts/_layout-nav.html')
+    </footer>
+  </div>
+</body>
+
+</html>

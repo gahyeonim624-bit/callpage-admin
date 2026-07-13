@@ -1,0 +1,144 @@
+.mypage {
+  padding: 24px 16px 32px;
+}
+
+.mypage-section-title {
+  margin: 0 0 12px;
+  @include typography(15px, 700);
+  color: #0F1212;
+}
+
+.mypage-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.mypage-setting-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.mypage-setting-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #E1E8EA;
+
+  i {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .icon-bell {
+    background-image: url("../images/icon-bell.svg");
+  }
+
+  .icon-layers {
+    background-image: url("../images/icon-layers.svg");
+  }
+}
+
+.mypage-setting-text {
+  flex: 1;
+  min-width: 0;
+
+  strong {
+    display: block;
+    @include typography(14px, 600);
+    color: #0F1212;
+  }
+
+  small {
+    display: block;
+    @include typography(13px, 400);
+    color: #5C6566;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 44px;
+  height: 24px;
+
+  input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+.switch-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background-color: #D4DCDC;
+  transition: background-color 0.2s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+  }
+}
+
+.switch input:checked + .switch-track {
+  background-color: $teal;
+
+  &::before {
+    transform: translateX(20px);
+  }
+}
+
+.mypage-info-card {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.member-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 10px;
+  border-radius: 100px;
+  background-color: #E5F6F8;
+  @include typography(12px, 700);
+  color: $teal;
+}
+
+.mypage-withdraw-btn {
+  width: 100%;
+  height: 40px;
+  margin-top: 16px;
+  border: 1px solid #D4DCDC;
+  border-radius: 8px;
+  @include typography(13px, 700);
+  color: #5C6566;
+}

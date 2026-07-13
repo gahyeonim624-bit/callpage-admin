@@ -1,0 +1,63 @@
+.login-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 105px 16px 48px;
+  background: #F0F3F4;
+}
+
+.login-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.login-illustration img {
+  width: 152px;
+  height: 120px;
+}
+
+
+.login-brand-desc {
+  margin: 0;
+  @include typography(14px, 500);
+  color: #5C6566;
+}
+
+.login-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.login-btn {
+  width: 100%;
+  height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background-color: $teal;
+  @include typography(15px, 700);
+  color: #fff;
+  transition: transform 0.15s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.login-signup {
+  margin: 0;
+  @include typography(14px, 400);
+  color: #5C6566;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  a {
+    font-weight: 700;
+    color: $teal;
+  }
+}

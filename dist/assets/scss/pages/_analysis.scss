@@ -1,0 +1,151 @@
+.analysis {
+  padding: 24px 16px 32px;
+}
+
+.analysis-icon {
+  margin-bottom: 16px;
+
+  img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.analysis-title {
+  margin: 0 0 8px;
+  @include typography(24px, 700);
+  color: #0F1212;
+}
+
+.analysis-desc {
+  margin: 0 0 24px;
+  @include typography(14px, 400);
+  line-height: 1.5;
+  color: #313A3A;
+}
+
+.analysis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.analysis-item {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.analysis-item-text {
+  @include typography(14px, 400);
+  color:#313A3A;
+}
+
+.analysis-submit-btn {
+  width: 100%;
+  height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background-color: $teal;
+  @include typography(15px, 700);
+  color: #fff;
+  transition: transform 0.15s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.analysis-filter {
+  position: relative;
+  margin-bottom: 24px;
+  .consultation-filter-label {
+    line-height: 1.5;
+  }
+}
+
+.chart-card {
+  padding: 40px 16px 20px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.chart-desc {
+  margin: 2px 0 12px;
+  @include typography(13px, 400);
+  color: #5C6566;
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-top: 28px;
+  margin-bottom: 16px;
+  padding: 0 4px;
+}
+
+.bar-chart-col {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar-chart-track {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 96px;
+}
+
+.bar-chart-bar {
+  position: relative;
+  width: 100%;
+  min-height: 4px;
+  border-radius: 6px 6px 0 0;
+  background-color: $teal;
+}
+
+.bar-chart-value {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  @include typography(14px, 700);
+  color: $teal;
+}
+
+.chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @include typography(14px, 400);
+  color: #313A3A;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.chart-legend-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $teal;
+  @include typography(14px, 700);
+  line-height: 100%;
+  color: #fff;
+}

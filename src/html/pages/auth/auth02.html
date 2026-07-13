@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="page-auth">
+  <div class="layout layout-auth">
+    <header class="layout-header">
+      <nav class="navbar navbar-sub" id="navbarHeader">
+        <a class="navbar-back" href="@@webRoot/html/pages/auth/auth01.html">
+          <i class="icon-arrow-left"></i>
+        </a>
+      </nav>
+    </header>
+    <main class="layout-main">
+      <section class="auth">
+        <div class="auth-card">
+          <p class="auth-card-label">아래 번호로 전화를 걸어주세요</p>
+          <p class="auth-phone-number">0701-234-5678</p>
+          <p class="auth-timer" id="authTimer">00:39</p>
+          <p class="auth-card-status">전화 연결을 기다리는 중...</p>
+        </div>
+        <button type="button" class="auth-btn">이메일 인증하기</button>
+        <button type="button" class="auth-retry-btn">다시 시도</button>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

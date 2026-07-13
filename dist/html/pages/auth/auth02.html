@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover" />
+    <title>callpage-admin</title>
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- <link rel="icon" type="image/png" href="../../../assets/images/favicon.ico" sizes="32x32" /> -->
+
+    <!-- library css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <!-- library js -->
+    <script src="../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- publishing css -->
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../../assets/css/style.css" />
+
+    <!-- publishing js -->
+    <script src="../../../assets/js/common.js" defer></script>
+  </head>
+
+  <body class="page-auth">
+    <div class="layout layout-auth">
+      <header class="layout-header">
+        <nav class="navbar navbar-sub" id="navbarHeader">
+          <a class="navbar-back" href="../../../html/pages/auth/auth01.html">
+            <i class="icon-arrow-left"></i>
+          </a>
+        </nav>
+      </header>
+      <main class="layout-main">
+        <section class="auth">
+          <div class="auth-card">
+            <p class="auth-card-label">아래 번호로 전화를 걸어주세요</p>
+            <p class="auth-phone-number">0701-234-5678</p>
+            <p class="auth-timer" id="authTimer">00:39</p>
+            <p class="auth-card-status">전화 연결을 기다리는 중...</p>
+          </div>
+          <button type="button" class="auth-btn">이메일 인증하기</button>
+          <button type="button" class="auth-retry-btn">다시 시도</button>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover" />
+    <title>callpage-admin</title>
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- <link rel="icon" type="image/png" href="../../../assets/images/favicon.ico" sizes="32x32" /> -->
+
+    <!-- library css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <!-- library js -->
+    <script src="../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- publishing css -->
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../../assets/css/style.css" />
+
+    <!-- publishing js -->
+    <script src="../../../assets/js/common.js" defer></script>
+  </head>
+
+  <body class="page-mypage" data-nav-active="management">
+    <div class="layout layout-app">
+      <header class="layout-header">
+        <nav class="navbar navbar-sub" id="navbarHeader">
+          <h1 class="navbar-title">마이페이지</h1>
+          <div class="header-toggle" role="tablist">
+            <button type="button" class="header-toggle-btn" role="tab" aria-selected="false">자동응대</button>
+            <button type="button" class="header-toggle-btn active" role="tab" aria-selected="true">바로연결</button>
+          </div>
+        </nav>
+      </header>
+      <main class="layout-main">
+        <section class="mypage">
+          <h2 class="mypage-section-title">앱 설정</h2>
+          <div class="mypage-group">
+            <div class="mypage-setting-card">
+              <span class="mypage-setting-icon"><i class="icon-bell"></i></span>
+              <div class="mypage-setting-text">
+                <strong>알림 권한</strong>
+                <small>상담 알림을 받으려면 허용이 필요해요.</small>
+              </div>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="switch-track"></span>
+              </label>
+            </div>
+
+            <div class="mypage-setting-card">
+              <span class="mypage-setting-icon"><i class="icon-layers"></i></span>
+              <div class="mypage-setting-text">
+                <strong>다른 앱 위에 그리기</strong>
+                <small>전화 수신 시 화면 위에 정보를 표시해요.</small>
+              </div>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="switch-track"></span>
+              </label>
+            </div>
+          </div>
+
+          <h2 class="mypage-section-title">내 정보</h2>
+          <div class="mypage-info-card">
+            <div class="consultation-card-row">
+              <span class="consultation-row-label">이메일</span>
+              <span class="consultation-row-value">dkfslj@gmail.com</span>
+            </div>
+            <div class="consultation-card-row">
+              <span class="consultation-row-label">휴대폰</span>
+              <span class="consultation-row-value">010-8889-2770</span>
+            </div>
+            <div class="consultation-card-row">
+              <span class="consultation-row-label">회원가입</span>
+              <span class="member-badge">정식회원</span>
+            </div>
+          </div>
+
+          <button type="button" class="mypage-withdraw-btn">회원 탈퇴</button>
+        </section>
+      </main>
+      <footer class="layout-nav-wrap">
+        <nav class="layout-nav" id="layoutNav">
+          <a class="layout-nav-item" data-nav="home" href="../../../html/pages/home/dashboard.html">
+            <i class="nav-home"></i>
+            <span>홈</span>
+          </a>
+          <a class="layout-nav-item" data-nav="call" href="#">
+            <i class="nav-call"></i>
+            <span>콜투비</span>
+          </a>
+          <a class="layout-nav-item" data-nav="advice" href="../../../html/pages/consultation/consultation.html">
+            <i class="nav-advice"></i>
+            <span>상담</span>
+          </a>
+          <a class="layout-nav-item" data-nav="analysis" href="../../../html/pages/analysis/analysis.html">
+            <i class="nav-analysis"></i>
+            <span>분석</span>
+          </a>
+          <a class="layout-nav-item" data-nav="management" href="../../../html/pages/mypage/mypage.html">
+            <i class="nav-management"></i>
+            <span>관리</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

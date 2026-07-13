@@ -58,3 +58,196 @@
 
 .modal-footer {
 }
+
+.modal-preview-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.modal-preview {
+  width: 380px;
+  max-width: 100%;
+}
+
+.modal-preview-label {
+  margin: 0 0 8px;
+  @include typography(12px, 400);
+  color: $gray_99;
+}
+
+.modal-preview-frame {
+  display: flex;
+  flex-direction: column;
+  height: 520px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal-preview-frame--push {
+  justify-content: flex-end;
+  padding: 0 20px 60px;
+  background-color: #0b0b0d;
+}
+
+.modal-preview-frame--consult {
+  position: relative;
+  justify-content: center;
+  padding: 0 20px;
+  background-color: #a7a7a7;
+}
+
+.modal-preview-statusbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  @include typography(15px, 700);
+  color: $gray_22;
+
+  i {
+    display: inline-block;
+    width: 66px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../images/icon-statusbar.svg");
+  }
+}
+
+.modal-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.modal-brand-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../images/icon-brand-mark.svg");
+}
+
+.modal-brand-text {
+  @include typography(18px, 700);
+  color: $gray_22;
+}
+
+.modal-brand-logo {
+  height: 20px;
+  width: auto;
+}
+
+.push-card,
+.consult-card {
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.push-title {
+  margin: 0 0 2px;
+  @include typography(16px, 700);
+  color: #0F1212;
+}
+
+.push-desc {
+  margin: 0 0 32px;
+  @include typography(14px, 400);
+  color:#414751;
+}
+
+.consult-title {
+  margin: 0 0 16px;
+  @include typography(16px, 700);
+  color: #0F1212;
+}
+
+.consult-field {
+  margin-bottom: 16px;
+
+
+
+  label {
+    display: block;
+    margin-bottom: 2px;
+    @include typography(13px, 600);
+    color: #414751;
+  }
+
+  p {
+    margin: 0;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #F0F3F4;
+    @include typography(14px, 500);
+    color: #0F1212;
+  }
+}
+
+.push-actions,
+.consult-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.btn-detail {
+  flex: 1;
+  height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #E1E8EA;
+  @include typography(14px, 700);
+  color: #5C6566;
+}
+
+.btn-call-now {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background-color: $teal;
+  @include typography(14px, 700);
+  color: #fff;
+  min-width: 165px;
+
+  i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../images/icon-phone-fill.svg");
+  }
+}
+
+.push-modal {
+  .modal-dialog {
+    max-width: 384px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .modal-content {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

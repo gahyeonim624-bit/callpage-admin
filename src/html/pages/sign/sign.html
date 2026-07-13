@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/html/_include/_head.html')
+</head>
+
+<body class="page-sign">
+  <div class="layout sign-layout">
+    <header class="layout-header">
+      <nav class="navbar navbar-sub" id="navbarHeader">
+        <a class="navbar-back" href="@@webRoot/html/pages/login/login.html">
+          <i class="icon-arrow-left"></i>
+        </a>
+      </nav>
+    </header>
+    <main class="layout-main">
+      <section class="sign">
+        <h2 class="sign-title">회원가입</h2>
+        <p class="sign-desc">이메일 인증 후 전화 한 통으로 가입이 완료됩니다.</p>
+
+        <div class="sign-card">
+          <label class="create-field-label">이메일</label>
+          <div class="create-field">
+            <input type="email" class="create-input" placeholder="example@email.com">
+          </div>
+          <p class="sign-caption">입력하신 이메일로 인증 링크를 보내드려요.</p>
+
+          <hr class="sign-divider">
+
+          <label class="checkbox agree-all">
+            <input type="checkbox" checked>
+            <span class="checkbox-box"><i class="icon-check"></i></span>
+            <span class="checkbox-label">전체 동의</span>
+          </label>
+
+          <div class="agree-row">
+            <label class="checkbox">
+              <input type="checkbox" checked>
+              <span class="checkbox-box"><i class="icon-check"></i></span>
+              <span class="checkbox-label">(필수) 이용약관 동의</span>
+            </label>
+            <a href="#" class="agree-view">보기</a>
+          </div>
+
+          <div class="agree-row">
+            <label class="checkbox">
+              <input type="checkbox" checked>
+              <span class="checkbox-box"><i class="icon-check"></i></span>
+              <span class="checkbox-label">(필수)개인정보 처리방침 동의</span>
+            </label>
+            <a href="#" class="agree-view">보기</a>
+          </div>
+
+          <div class="agree-row">
+            <label class="checkbox">
+              <input type="checkbox">
+              <span class="checkbox-box"><i class="icon-check"></i></span>
+              <span class="checkbox-label">(선택) 마케팅 정보 수신 동의</span>
+            </label>
+            <a href="#" class="agree-view">보기</a>
+          </div>
+        </div>
+        <div class="sign-footer">
+          <button type="button" class="sign-submit-btn">이메일 인증하기</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>
