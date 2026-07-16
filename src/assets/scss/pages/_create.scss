@@ -409,10 +409,6 @@ $preq-type-icons: text, checkbox, select;
   color: #313A3A;
 }
 
-.preq-list:empty ~ .preq-caption {
-  display: none;
-}
-
 .create-buttons {
   display: flex;
   gap: 8px;

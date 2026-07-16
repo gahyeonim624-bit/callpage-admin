@@ -8,45 +8,31 @@
 <body class="page-details" data-nav-active="call">
   <div class="layout layout-app">
     <header class="layout-header">
-      @@include('@@webRoot/html/_layouts/_layout-header-sub.html', {"title": "콜투비"})
+      @@include('@@webRoot/html/_layouts/_layout-header-sub.html', {"title": "내 랜딩페이지"})
     </header>
     <main class="layout-main">
       <section class="create">
         <div class="create-field-wrap">
           <div class="create-field-group">
-            <label class="create-field-label">콜투비 이름</label>
+            <label class="create-field-label">랜딩페이지 이름</label>
             <div class="create-field">
               <input type="text" class="create-input" value="노안교정 수술 이벤트">
             </div>
           </div>
         </div>
 
-        <h3 class="section-title mt-2"><span class="section-title-bar"></span>콜투비 링크</h3>
+        <h3 class="section-title mt-2"><span class="section-title-bar"></span>랜딩페이지 링크</h3>
 
         <div class="create-field-wrap mt-2">
           <div class="create-field-group">
             <label class="create-field-label">광고 채널</label>
             <div class="create-field">
-              <select class="create-input ad-channel-select" required>
-                <option value="" disabled selected hidden>선택</option>
-                <option value="instagram">인스타그램</option>
-                <option value="homepage">홈페이지</option>
-                <option value="naver-blog">네이버 블로그</option>
-                <option value="youtube">유튜브</option>
-                <option value="kakao-channel">카카오톡 채널</option>
-                <option value="naver-cafe">네이버 카페</option>
-                <option value="smartstore">스마트스토어</option>
-                <option value="naver-place">네이버 플레이스</option>
-                <option value="custom">직접입력</option>
-              </select>
-            </div>
-            <div class="create-field ad-channel-custom" hidden>
-              <input type="text" class="create-input" placeholder="광고 채널명을 입력해주세요.">
+              <input type="text" class="create-input" value="홈페이지" readonly>
             </div>
           </div>
 
           <div class="create-field-group">
-            <label class="create-field-label">콜투비 링크</label>
+            <label class="create-field-label">랜딩페이지 링크</label>
             <div class="create-field-copy">
               <input type="text" class="create-input" value="http://callpage/connect/dhnwlef..." readonly>
               <button type="button" class="copy-btn">복사</button>
@@ -60,20 +46,18 @@
             </button>
             <button type="button" class="btn btn-lg create-btn-next">QR 코드 만들기</button>
           </div>
-
-          <p class="create-desc m-0">상담을 위해 필요한 정보를 미리 질문해 보세요.</p>
         </div>
 
         <div class="create-field-wrap mt-2">
           <div class="create-field-group">
-            <label class="create-field-label">콘텐츠 채널</label>
+            <label class="create-field-label">광고 채널</label>
             <div class="create-field">
-              <input type="text" class="create-input" value="인스타그램">
+              <input type="text" class="create-input" value="인스타그램" readonly>
             </div>
           </div>
 
           <div class="create-field-group">
-            <label class="create-field-label">콘텐츠에 연결할 링크</label>
+            <label class="create-field-label">랜딩페이지 링크</label>
             <div class="create-field-copy">
               <input type="text" class="create-input" value="http://callpage/connect/dhnwlef..." readonly>
               <button type="button" class="copy-btn">복사</button>
@@ -85,7 +69,7 @@
               <i class="icon-search-plus"></i>
               미리보기
             </button>
-            <button type="button" class="btn btn-lg create-btn-next">QR 코드 다시 만들기</button>
+            <button type="button" class="btn btn-lg create-btn-next">QR 코드만들기</button>
           </div>
 
           <div class="qr-preview">
